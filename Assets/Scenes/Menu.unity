@@ -419,6 +419,7 @@ GameObject:
   - component: {fileID: 526447588}
   - component: {fileID: 526447587}
   - component: {fileID: 526447586}
+  - component: {fileID: 526447589}
   m_Layer: 5
   m_Name: Settings
   m_TagString: Setting
@@ -540,6 +541,20 @@ CanvasRenderer:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 526447584}
   m_CullTransparentMesh: 1
+--- !u!114 &526447589
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 526447584}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 908d6bc33d226074ebc6c4b019ddaa7e, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  button: {fileID: 526447584}
+  posConfirm: 0
 --- !u!1 &1108164001
 GameObject:
   m_ObjectHideFlags: 0
@@ -552,8 +567,9 @@ GameObject:
   - component: {fileID: 1108164005}
   - component: {fileID: 1108164004}
   - component: {fileID: 1108164003}
+  - component: {fileID: 1108164006}
   m_Layer: 5
-  m_Name: Tutorial
+  m_Name: Description
   m_TagString: Tutorial
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -673,6 +689,20 @@ CanvasRenderer:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1108164001}
   m_CullTransparentMesh: 1
+--- !u!114 &1108164006
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1108164001}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 908d6bc33d226074ebc6c4b019ddaa7e, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  button: {fileID: 1108164001}
+  posConfirm: 0
 --- !u!1 &1245983270
 GameObject:
   m_ObjectHideFlags: 0
@@ -743,7 +773,7 @@ MonoBehaviour:
     m_HorizontalOverflow: 0
     m_VerticalOverflow: 0
     m_LineSpacing: 1
-  m_Text: Tutorial
+  m_Text: Description
 --- !u!222 &1245983273
 CanvasRenderer:
   m_ObjectHideFlags: 0
@@ -973,7 +1003,7 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0.39100003, y: 0.10829287}
   m_AnchorMax: {x: 0.6107483, y: 0.23373222}
-  m_AnchoredPosition: {x: -1.0391006, y: 0.6499939}
+  m_AnchoredPosition: {x: -1, y: 2.5}
   m_SizeDelta: {x: 1, y: 5}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!114 &1998823341
@@ -1083,7 +1113,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   button: {fileID: 1998823339}
-  scaleLimit: 1
+  posConfirm: 0
 --- !u!1 &2129307098
 GameObject:
   m_ObjectHideFlags: 0
