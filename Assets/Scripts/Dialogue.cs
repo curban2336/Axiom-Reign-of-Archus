@@ -6,9 +6,19 @@ using TMPro;
 public class Dialogue : MonoBehaviour
 {
     public TMP_Text Text;
+    public TMP_Text Name;
     private string currentText;
+    private Queue<string> sentences;
+    private int i = 0;
 
     CanvasGroup group;
+
+    void Awake()
+    {
+        sentences = new Queue<string>();
+        //Name.text = scripts[i]._name;
+        //Text.text = scripts[i]._line;
+    }
     
     // Start is called before the first frame update
     void Start()
@@ -16,6 +26,11 @@ public class Dialogue : MonoBehaviour
         group = GetComponent<CanvasGroup>();
         group.alpha = 0;
         Show(Text.text);
+    }
+
+    public void StartDialogue(Script dialogue)
+    {
+
     }
 
     public void Show(string text)
@@ -29,6 +44,14 @@ public class Dialogue : MonoBehaviour
     {
         StopAllCoroutines();
         group.alpha = 0;
+    }
+
+    public void Increment()
+    {
+        i++;
+        //Name.text = scripts[i]._name;
+        //Text.text = scripts[i]._line;
+        Show(Text.text);
     }
 
     private IEnumerator DisplayText()
@@ -45,7 +68,7 @@ public class Dialogue : MonoBehaviour
             Text.text = originalText;
             displayedText = Text.text.Insert(alphaIndex, "<color=#00000000>");
             Text.text = displayedText;
-            yield return new WaitForSeconds(0.1f);
+            yield return new WaitForSeconds(0.05f);
         }
         yield return null;
     }
