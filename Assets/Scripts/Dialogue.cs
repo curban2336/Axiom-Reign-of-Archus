@@ -17,8 +17,6 @@ public class Dialogue : MonoBehaviour
     void Awake()
     {
         sentences = new Queue<string>();
-        //Name.text = scripts[i]._name;
-        //Text.text = scripts[i]._line;
     }
     
     // Start is called before the first frame update
@@ -32,7 +30,11 @@ public class Dialogue : MonoBehaviour
     {
         sentences.Clear();
 
-        Name.text = dialogue.name;
+        if (Name == null) ;
+        else
+        {
+            Name.text = dialogue.name;
+        }
 
         foreach(string sentence in dialogue.sentences)
         {
