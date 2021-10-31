@@ -14,7 +14,7 @@ public class Choice : MonoBehaviour
     public Vector3 updatePos;
     private float posMax;
     private float posMin;
-    public bool posConfirm = false;
+
 
     void Awake()
     {
@@ -27,39 +27,47 @@ public class Choice : MonoBehaviour
     {
         updatePos = button.transform.position;
         updatePos.x = posX;
-        tempPos = 0.2f;
+        tempPos = 0.4f;
         button.transform.position = updatePos;
         offScreen = button.transform.position;
     }
 
     public void Press()
     {
-        posConfirm = true;
-        otherChoice.GetComponent<Choice>().posConfirm = true;
+        otherChoice.GetComponent<Choice>().sendBack();
     }
 
-    // Update is called once per frame
-    void Update()
+    public void callChoice()
     {
-        if (posConfirm == false && updatePos.x >= posMax)
+        if (updatePos.x >= posMax)
         {
             updatePos.x -= tempPos;
             button.transform.position = updatePos;
+            Invoke("callChoice", 0.01f);
         }
-        else if (posConfirm == false && updatePos.x <= posMin)
+        else if (updatePos.x <= posMin)
         {
             updatePos.x += tempPos;
             button.transform.position = updatePos;
+            Invoke("callChoice", 0.01f);
         }
-        else if (posConfirm == true && button.transform.position.x > offScreen.x)
+    }
+
+    public void sendBack()
+    {
+
+        if (button.transform.position.x > offScreen.x)
         {
             updatePos.x -= tempPos;
             button.transform.position = updatePos;
+            Invoke("sendBack", 0.01f);
         }
-        else if (posConfirm == true && button.transform.position.x < offScreen.x)
+        else if (button.transform.position.x < offScreen.x)
         {
             updatePos.x += tempPos;
             button.transform.position = updatePos;
+            Invoke("sendBack", 0.01f);
         }
+
     }
 }

@@ -10,6 +10,7 @@ public class Dialogue : MonoBehaviour
     private string currentText;
     private Queue<string> sentences;
     private int i = 0;
+    private bool returnConfirm = false;
 
     CanvasGroup group;
 
@@ -25,12 +26,28 @@ public class Dialogue : MonoBehaviour
     {
         group = GetComponent<CanvasGroup>();
         group.alpha = 0;
-        Show(Text.text);
     }
 
     public void StartDialogue(Script dialogue)
     {
+        sentences.Clear();
 
+        Name.text = dialogue.name;
+
+        foreach(string sentence in dialogue.sentences)
+        {
+            sentences.Enqueue(sentence);
+        }
+        DisplayNextSentence();
+    }
+
+    public void DisplayNextSentence()
+    {
+        if (sentences.Count == 0) return;
+
+        string sentence = sentences.Dequeue();
+
+        Show(sentence); 
     }
 
     public void Show(string text)
@@ -49,9 +66,6 @@ public class Dialogue : MonoBehaviour
     public void Increment()
     {
         i++;
-        //Name.text = scripts[i]._name;
-        //Text.text = scripts[i]._line;
-        Show(Text.text);
     }
 
     private IEnumerator DisplayText()
@@ -71,5 +85,17 @@ public class Dialogue : MonoBehaviour
             yield return new WaitForSeconds(0.05f);
         }
         yield return null;
+    }
+
+    void Update()
+    {
+        if (i == 2 && returnConfirm == false)
+        {
+            foreach(Choice choice in FindObjectsOfType<Choice>())
+            {
+                choice.callChoice();
+            }
+            returnConfirm = true;
+        }
     }
 }

@@ -6,7 +6,9 @@ public class Interactable : MonoBehaviour
 {
     public Script dialogue;
 
-    public void TriggerDialouge()
+
+
+    public void TriggerDialogue()
     {
         FindObjectOfType<Dialogue>().StartDialogue(dialogue);
     }
