@@ -9,6 +9,7 @@ public class Dialogue : MonoBehaviour
     public TMP_Text Name;
     private string currentText;
     private Queue<string> sentences;
+    private Queue<string> names;
     private int i = 0;
     private bool returnConfirm = false;
 
@@ -17,6 +18,7 @@ public class Dialogue : MonoBehaviour
     void Awake()
     {
         sentences = new Queue<string>();
+        names = new Queue<string>();
     }
     
     // Start is called before the first frame update
@@ -29,14 +31,14 @@ public class Dialogue : MonoBehaviour
     public void StartDialogue(Script dialogue)
     {
         sentences.Clear();
+        names.Clear();
 
-        if (Name == null) ;
-        else
+        foreach (string name in dialogue.names)
         {
-            Name.text = dialogue.name;
+            names.Enqueue(name);
         }
 
-        foreach(string sentence in dialogue.sentences)
+        foreach (string sentence in dialogue.sentences)
         {
             sentences.Enqueue(sentence);
         }
@@ -46,6 +48,9 @@ public class Dialogue : MonoBehaviour
     public void DisplayNextSentence()
     {
         if (sentences.Count == 0) return;
+        if (names.Count == 0) return;
+
+        Name.text = names.Dequeue();
 
         string sentence = sentences.Dequeue();
 

@@ -7,5 +7,5 @@ public class Script
 {
     [TextArea(3, 10)]
     public string[] sentences;
-    public string name;
+    public string[] names;
 }
