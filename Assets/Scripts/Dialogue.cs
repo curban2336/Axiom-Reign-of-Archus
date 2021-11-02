@@ -10,8 +10,11 @@ public class Dialogue : MonoBehaviour
     private string currentText;
     private Queue<string> sentences;
     private Queue<string> names;
-    private int i = 0;
+    public int i = 1;
+    public int[] counter;
+    public int index = 0;
     private bool returnConfirm = false;
+    private bool stopIncrement = false;
 
     CanvasGroup group;
 
@@ -72,6 +75,15 @@ public class Dialogue : MonoBehaviour
 
     public void Increment()
     {
+        if (names.Count == 0)
+        {
+            if(stopIncrement == false)
+            {
+                i++;
+                stopIncrement = true;
+            }
+            return;
+        }
         i++;
     }
 
@@ -89,20 +101,25 @@ public class Dialogue : MonoBehaviour
             Text.text = originalText;
             displayedText = Text.text.Insert(alphaIndex, "<color=#00000000>");
             Text.text = displayedText;
-            yield return new WaitForSeconds(0.05f);
+            yield return new WaitForSeconds(0.03f);
         }
         yield return null;
     }
 
     void Update()
     {
-        if (i == 2 && returnConfirm == false)
+        if (i == counter[index] && returnConfirm == false)
         {
             foreach(Choice choice in FindObjectsOfType<Choice>())
             {
                 choice.callChoice();
             }
             returnConfirm = true;
+            index++;
+        }
+        else
+        {
+            returnConfirm = false;
         }
     }
 }

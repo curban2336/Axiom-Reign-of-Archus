@@ -558,6 +558,9 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   Text: {fileID: 1985055031}
   Name: {fileID: 1128321271}
+  i: 1
+  counter: 14000000280000003c000000
+  index: 0
 --- !u!114 &848050973
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -785,12 +788,57 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   dialogue:
     sentences:
-    - So many choices!
-    - Just choose one of the two options
-    - That's all you have to do...
+    - Hello my liege! We have a busy day ahead of us, I hope you rested well.
+    - I did, thank you. The Equilateral Festival is coming soon. Are the preparations
+      on our docket today?
+    - 'Unfortunately not sire. We have more pressing matters to attend to. '
+    - Like what?
+    - "Is that a serious question? We need to make sure that the kingdom is secure
+      before we worry about the festival! Remember what I told you yesterday? There\u2019s
+      been rumors of revolution!"
+    - Exactly! We need to find out how dangerous this insurgence is. I discussed
+      this issue with some of our generals to devise a plan to propose to you, my
+      lord.
+    - Well? What did you come up with?
+    - Should we declare Martial Law?
+    - What???
+    - ". . . Declaring Martial Law would upset the people, causing unrest. There
+      isn\u2019t a good chance that this goes over well."
+    - 'That is the idea my lord. The insurgence must be very small and weak for them
+      to have not gone public yet. '
+    - 'Enacting Martial Law would force them to make a move. They will capitalize
+      on the unrest of the citizens if they want to grow stronger.  '
+    - "And that would allow us to have an easier time finding them\u2026"
+    - Exactly!
+    - "I don\u2019t know how I feel about manipulating our people, and intentionally
+      persuading them to betray the monarchy."
+    - All in the hope of pulling this revolution into the light?
+    - "...It seems dirty and compromising\u2026"
+    - I agree...besides, your public opinion is crucial to the revolution's failure.
+    - "If the people love you then they won\u2019t have a reason to rebel, and then
+      the insurgents won\u2019t have a leg to stand on."
+    - The decision is up to you my lord, but if we do not we will have a harder time
+      finding these people or confirming the rumors.
     names:
     - 'Rectan:'
+    - 'Archus:'
     - 'Rectan:'
+    - 'Archus:'
+    - 'Circe:'
+    - 'Rectan:'
+    - 'Archus:'
+    - 'Rectan:'
+    - 'Circe:'
+    - 'Archus:'
+    - 'Rectan:'
+    - 'Rectan:'
+    - 'Circe:'
+    - 'Rectan:'
+    - 'Archus:'
+    - 'Archus:'
+    - 'Archus:'
+    - 'Circe:'
+    - 'Circe:'
     - 'Rectan:'
 --- !u!1 &931932794
 GameObject:
