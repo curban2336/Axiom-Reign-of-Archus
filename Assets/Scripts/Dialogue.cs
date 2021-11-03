@@ -1,17 +1,24 @@
 using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
+using UnityEngine.UI;
 using TMPro;
 
 public class Dialogue : MonoBehaviour
 {
     public TMP_Text Text;
     public TMP_Text Name;
+    public Text choice1;
+    public Text choice2;
+    public TMP_Text Decision;
     private string currentText;
     private Queue<string> sentences;
     private Queue<string> names;
     public int i = 1;
     public int[] counter;
+    public Queue<string> choice1s;
+    public Queue<string> choice2s;
+    public Queue<string> decisions;
     public int index = 0;
     private bool returnConfirm = false;
     private bool stopIncrement = false;
@@ -22,6 +29,19 @@ public class Dialogue : MonoBehaviour
     {
         sentences = new Queue<string>();
         names = new Queue<string>();
+        choice1s = new Queue<string>();
+        choice1s.Enqueue("Yes");
+        choice1s.Enqueue("Yes");
+        choice1s.Enqueue("Exile");
+        choice2s = new Queue<string>();
+        choice2s.Enqueue("No");
+        choice2s.Enqueue("No");
+        choice2s.Enqueue("Imprison");
+        decisions = new Queue<string>();
+        decisions.Enqueue("Declare Martial Law?");
+        decisions.Enqueue("Send Investigators beyond Geomet Territory to find Dena?");
+        decisions.Enqueue("Exile or Imprison Heretics?");
+        Decision.text = "";
     }
     
     // Start is called before the first frame update
@@ -110,6 +130,9 @@ public class Dialogue : MonoBehaviour
     {
         if (i == counter[index] && returnConfirm == false)
         {
+            choice1.text = choice1s.Dequeue();
+            choice2.text = choice2s.Dequeue();
+            Decision.text = decisions.Dequeue();
             foreach(Choice choice in FindObjectsOfType<Choice>())
             {
                 choice.callChoice();
