@@ -4,12 +4,20 @@ using UnityEngine;
 
 public class Interactable : MonoBehaviour
 {
-    public Script dialogue;
+    public List<Script> dialogue;
+    public int i = 0;
 
 
 
     public void TriggerDialogue()
     {
-        FindObjectOfType<Dialogue>().StartDialogue(dialogue);
+        FindObjectOfType<Dialogue>().StartDialogue(dialogue[i]);
+        if (dialogue.Count > 1)
+        {
+            foreach (GameObject choice in GameObject.FindGameObjectsWithTag("Choice"))
+            {
+                choice.GetComponent<Interactable>().i++;
+            }
+        }
     }
 }

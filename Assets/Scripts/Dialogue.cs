@@ -105,6 +105,7 @@ public class Dialogue : MonoBehaviour
             return;
         }
         i++;
+        stopIncrement = false;
     }
 
     private IEnumerator DisplayText()
@@ -128,7 +129,7 @@ public class Dialogue : MonoBehaviour
 
     void Update()
     {
-        if (i == counter[index] && returnConfirm == false)
+        if (returnConfirm == false && i == counter[index])
         {
             choice1.text = choice1s.Dequeue();
             choice2.text = choice2s.Dequeue();

@@ -1,6 +1,7 @@
 using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
+using TMPro;
 
 public class Choice : MonoBehaviour
 {
@@ -8,6 +9,7 @@ public class Choice : MonoBehaviour
 
     public GameObject button;
     public GameObject otherChoice;
+    public TMP_Text Decision;
     public float posX;
     private float tempPos;
     public Vector3 offScreen;
@@ -60,12 +62,14 @@ public class Choice : MonoBehaviour
         {
             updatePos.x -= tempPos;
             button.transform.position = updatePos;
+            Decision.text = "";
             Invoke("sendBack", 0.01f);
         }
         else if (button.transform.position.x < offScreen.x)
         {
             updatePos.x += tempPos;
             button.transform.position = updatePos;
+            Decision.text = "";
             Invoke("sendBack", 0.01f);
         }
 
