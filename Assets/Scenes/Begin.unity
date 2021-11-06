@@ -622,12 +622,11 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   dialogue:
   - sentences:
-    - No, I cannot impose a totalitarian control over my people just to drag my enemies
-      out. I will find them, but I will also not compromise my morals to do this.
-    - "Thank you Archus, I can\u2019t imagine how the lower caste Geomet would have
-      responded."
-    - I do not think this wise my lord, but the decision is ultimately yours. I will
-      relay your decisions once we are done here!
+    - Declare Martial Law, we will draw the insurrection out.
+    - "I don\u2019t think this is a good idea Archus...all you\u2019re doing is helping
+      them grow."
+    - But with the benefit that it will be easier to find them. I will relay your
+      decisions once we are done here my lord!
     - This brings us to the next item on the docket. King Dena.
     - "I\u2019m guessing our scouts have not been able to find our past king?"
     - Our sources tell us he is nowhere in Geomet Territory. He must have left the
@@ -675,14 +674,12 @@ MonoBehaviour:
     - 'Archus:'
     - 'Circe:'
   - sentences:
-    - Keep our investigators and scouts within our borders, Circe is right. We cannot
-      hope to uncover these rebels if we restrain ourselves and stretch our detachments
-      thin.
-    - "Not to mention that finding Dena won\u2019t mean anything if we don\u2019t
-      have a kingdom for him to help save\u2026"
-    - It is a fair point, Circe, these rebels are a more...immediate threat to both
-      me and the people.
-    - "I understand sire, moving on\u2026"
+    - Send a detachment of Geomet to search for Dena beyond our borders.
+    - Are you sure my liege?
+    - Yes, Dena has ruled longer than I, surely he would know how to route out these
+      rebels. We need all the advantages we can get, especially with the Birchar
+      growing more hostile to the East.
+    - "Excellent! Moving on\u2026"
     - The final issue to be addressed by you  involves some recent heretics that
       have been captured. They spread lies about the Holy Shapes and attempt to convert
       Geomet away from the true belief.
@@ -720,6 +717,29 @@ MonoBehaviour:
     - 'Circe:'
     - 'Rectan:'
     - 'Archus:'
+  - sentences:
+    - Exile the heretics.
+    - Archus??
+    - The exiles should not be allowed to fester their heresy within Geomet land.
+      It could cause a schism in our belief. It also would allow us an opportunity
+      to track the heretics and see if they find the insurgence.
+    - Such a wise decision my Lord!!
+    - "I don\u2019t know...it seems risky\u2026but if you say so, Archus."
+    - If we keep them inside our borders and together we run the risk of starting
+      another revolution or losing precious Geomet lives keeping them under control.
+      At least in exile they are outside our borders.
+    - "You\u2019re the King, Archus. I\u2019ll support your decision . . . but that
+      doesn\u2019t mean I agree with it."
+    - I will personally see to your order's completion! Good day, my lord!
+    names:
+    - 'Archus:'
+    - 'Circe:'
+    - 'Archus:'
+    - 'Rectan:'
+    - 'Circe:'
+    - 'Archus:'
+    - 'Circe:'
+    - 'Rectan:'
   i: 0
 --- !u!1 &848050969
 GameObject:
@@ -1456,51 +1476,26 @@ MonoBehaviour:
     - 'Rectan:'
     - 'Archus:'
   - sentences:
-    - Keep our investigators and scouts within our borders, Circe is right. We cannot
-      hope to uncover these rebels if we restrain ourselves and stretch our detachments
-      thin.
-    - "Not to mention that finding Dena won\u2019t mean anything if we don\u2019t
-      have a kingdom for him to help save\u2026"
-    - It is a fair point, Circe, these rebels are a more...immediate threat to both
-      me and the people.
-    - "I understand sire, moving on\u2026"
-    - The final issue to be addressed by you  involves some recent heretics that
-      have been captured. They spread lies about the Holy Shapes and attempt to convert
-      Geomet away from the true belief.
-    - "I\u2019ll never understand how some Geomet cannot believe in the Holy Shapes
-      when our very food comes from the gods\u2026"
-    - "It isn\u2019t hard for me to understand where they come from. Most of them
-      come from the lower caste. To them, they feel betrayed. The Shapes were supposed
-      to provide, and now they live in squalor."
-    - You turned out just fine, you were rewarded for your faith.
-    - "I was lucky, not many feel the same about their blessings. I\u2019m not saying
-      they are right about the Holy Shapes, but I can understand their desire for
-      something...more."
-    - I suppose...
-    - What exactly is the issue involving them, Rectan?
-    - Well, there is some debate among the High Caste about what to do with them?
-      The consensus is divided primarily between exile or harsh imprisonment.
-    - Imprisonment may allow their heresy to fester and grow...but at least they
-      would be under our watchful eye.
-    - Exile removes them from the kingdom...but they may be food for the revolution.
-      Or it could cause other unforeseen problems, as we cannot monitor them.
-    - Hmmm...
+    - Imprison the heretics.
+    - ...
+    - 'We cannot willingly send more soldiers to our enemy. At least while they are
+      here we can keep tabs on them, and ensure they do not spread their lies. '
+    - If you decree, my lord
+    - This is definitely the safer option, Archus.
+    - I concur, uncovering the revolution will require all the assets we can muster.
+      I will not intentionally cripple our chances of finding this underlying threat
+      to my people.
+    - "You haven\u2019t changed one bit Archus...it\u2019s reassuring."
+    - I will personally see to your order's completion! Good day, my lord!
     names:
     - 'Archus:'
     - 'Circe:'
     - 'Archus:'
     - 'Rectan:'
-    - 'Rectan:'
     - 'Circe:'
     - 'Archus:'
-    - 'Circe:'
-    - 'Archus:'
-    - 'Circe:'
-    - 'Archus:'
-    - 'Rectan:'
     - 'Circe:'
     - 'Rectan:'
-    - 'Archus:'
   i: 0
 --- !u!1 &1128321269
 GameObject:

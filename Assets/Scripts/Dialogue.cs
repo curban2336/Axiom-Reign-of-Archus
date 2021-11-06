@@ -129,7 +129,7 @@ public class Dialogue : MonoBehaviour
 
     void Update()
     {
-        if (returnConfirm == false && i == counter[index])
+        if (returnConfirm == false && counter[index] != null && decisions.Count > 0 && i == counter[index])
         {
             choice1.text = choice1s.Dequeue();
             choice2.text = choice2s.Dequeue();
@@ -139,7 +139,10 @@ public class Dialogue : MonoBehaviour
                 choice.callChoice();
             }
             returnConfirm = true;
-            index++;
+            if (index < 2)
+            {
+                index++;
+            }
         }
         else
         {
