@@ -8,6 +8,8 @@ TagManager:
   - Begin
   - Tutorial
   - Choice
+  - PO
+  - AR
   layers:
   - Default
   - TransparentFX

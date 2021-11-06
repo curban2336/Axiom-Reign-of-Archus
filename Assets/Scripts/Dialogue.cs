@@ -15,6 +15,7 @@ public class Dialogue : MonoBehaviour
     private Queue<string> sentences;
     private Queue<string> names;
     public int i = 1;
+    public int j = 0;
     public int[] counter;
     public Queue<string> choice1s;
     public Queue<string> choice2s;
@@ -22,6 +23,7 @@ public class Dialogue : MonoBehaviour
     public int index = 0;
     private bool returnConfirm = false;
     private bool stopIncrement = false;
+    public GameObject choiceManager;
 
     CanvasGroup group;
 
@@ -100,12 +102,15 @@ public class Dialogue : MonoBehaviour
             if(stopIncrement == false)
             {
                 i++;
+                j++;
                 stopIncrement = true;
             }
             return;
         }
         i++;
         stopIncrement = false;
+
+        choiceManager.GetComponent<ChoiceManager>().choiceS[j] = true;
     }
 
     private IEnumerator DisplayText()
