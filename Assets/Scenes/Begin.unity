@@ -375,40 +375,42 @@ MonoBehaviour:
   successModifier: 0
   publicOpinion: 100
   axiomReserve: 1000
-  threshold1: 0
-  threshold2: 0
-  threshold3: 0
+  resourceR: 0
+  resourceP: 0
+  threshold1: 6
+  threshold2: 5
+  threshold3: 4
   POText: {fileID: 0}
   ARText: {fileID: 0}
   PO: {fileID: 1536738145}
   AR: {fileID: 625805489}
   choiceOne:
-    modifierS: 0
-    modifierF: 0
-    designatorS: 
-    designatorF: 
-    modifier2S: 0
-    modifier2F: 0
-    designator2S: 
-    designator2F: 
+    modifierS: 100
+    modifierF: -50
+    designatorS: PO
+    designatorF: AR
+    modifier2S: 100
+    modifier2F: -50
+    designator2S: PO
+    designator2F: AR
   choiceTwo:
-    modifierS: 0
-    modifierF: 0
-    designatorS: 
-    designatorF: 
-    modifier2S: 0
-    modifier2F: 0
-    designator2S: 
-    designator2F: 
+    modifierS: 100
+    modifierF: -50
+    designatorS: PO
+    designatorF: AR
+    modifier2S: 100
+    modifier2F: -50
+    designator2S: PO
+    designator2F: AR
   choiceThree:
-    modifierS: 0
-    modifierF: 0
-    designatorS: 
-    designatorF: 
-    modifier2S: 0
-    modifier2F: 0
-    designator2S: 
-    designator2F: 
+    modifierS: 100
+    modifierF: -50
+    designatorS: PO
+    designatorF: AR
+    modifier2S: 100
+    modifier2F: -50
+    designator2S: PO
+    designator2F: AR
 --- !u!4 &401216763
 Transform:
   m_ObjectHideFlags: 0
@@ -695,6 +697,8 @@ MonoBehaviour:
   posX: -250
   offScreen: {x: 0, y: 0, z: 0}
   updatePos: {x: 0, y: 0, z: 0}
+  directive: Left
+  choiceManager: {fileID: 401216761}
 --- !u!114 &526447590
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -997,7 +1001,6 @@ MonoBehaviour:
   j: 0
   counter: 140000002600000035000000
   index: 0
-  choiceManager: {fileID: 401216761}
 --- !u!114 &848050973
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -1546,6 +1549,8 @@ MonoBehaviour:
   posX: 1400
   offScreen: {x: 0, y: 0, z: 0}
   updatePos: {x: 0, y: 0, z: 0}
+  directive: Right
+  choiceManager: {fileID: 401216761}
 --- !u!114 &1108164007
 MonoBehaviour:
   m_ObjectHideFlags: 0

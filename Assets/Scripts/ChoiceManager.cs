@@ -28,6 +28,8 @@ public class ChoiceManager: MonoBehaviour
     public float successModifier = 0;
     public int publicOpinion = 100;
     public int axiomReserve = 1000;
+    public int resourceR = 0;
+    public int resourceP = 0;
     public Queue<int> thresholds;
     public int threshold1;
     public int threshold2;
@@ -43,6 +45,9 @@ public class ChoiceManager: MonoBehaviour
     // Start is called before the first frame update
     void Start()
     {
+        resourceP = publicOpinion;
+        resourceR = axiomReserve;
+
         thresholds = new Queue<int>();
         thresholds.Enqueue(threshold1);
         thresholds.Enqueue(threshold2);
@@ -82,15 +87,17 @@ public class ChoiceManager: MonoBehaviour
                 if (choiceOne.designatorF == "PO")
                 {
                     designator = "Public Opinion: ";
-                    resource = publicOpinion;
+                    resourceP += choiceOne.modifierF;
+                    resource = resourceP;
                 }
                 else if (choiceOne.designatorF == "AR")
                 {
                     designator = "Axiom Reserve: ";
-                    resource = axiomReserve;
+                    resourceR += choiceOne.modifierF;
+                    resource = resourceR;
                 }
 
-                GameObject.FindGameObjectWithTag(choiceOne.designatorF).GetComponent<TextMeshProUGUI>().text = designator + (resource + choiceOne.modifierF);
+                GameObject.FindGameObjectWithTag(choiceOne.designatorF).GetComponent<TextMeshProUGUI>().text = designator + (resource);
                 return;
             }
             if (choiceS[0] == true)
@@ -98,15 +105,17 @@ public class ChoiceManager: MonoBehaviour
                 if (choiceOne.designatorS == "PO")
                 {
                     designator = "Public Opinion: ";
-                    resource = publicOpinion;
+                    resourceP += choiceOne.modifierS;
+                    resource = resourceP;
                 }
                 else if (choiceOne.designatorS == "AR")
                 {
                     designator = "Axiom Reserve: ";
-                    resource = axiomReserve;
+                    resourceR += choiceOne.modifierS;
+                    resource = resourceR;
                 }
 
-                GameObject.FindGameObjectWithTag(choiceOne.designatorS).GetComponent<TextMeshProUGUI>().text = designator + (resource + choiceOne.modifierS);
+                GameObject.FindGameObjectWithTag(choiceOne.designatorS).GetComponent<TextMeshProUGUI>().text = designator + (resource);
                 return;
             }
         }
@@ -117,15 +126,17 @@ public class ChoiceManager: MonoBehaviour
                 if (choiceOne.designator2F == "PO")
                 {
                     designator = "Public Opinion: ";
-                    resource = publicOpinion;
+                    resourceP += choiceOne.modifier2F;
+                    resource = resourceP;
                 }
                 else if (choiceOne.designator2F == "AR")
                 {
                     designator = "Axiom Reserve: ";
-                    resource = axiomReserve;
+                    resourceR += choiceOne.modifier2F;
+                    resource = resourceR;
                 }
 
-                GameObject.FindGameObjectWithTag(choiceOne.designator2F).GetComponent<TextMeshProUGUI>().text = designator + (resource + choiceOne.modifier2F);
+                GameObject.FindGameObjectWithTag(choiceOne.designator2F).GetComponent<TextMeshProUGUI>().text = designator + (resource);
                 return;
             }
             if (choiceS[0] == true)
@@ -133,15 +144,17 @@ public class ChoiceManager: MonoBehaviour
                 if (choiceOne.designator2S == "PO")
                 {
                     designator = "Public Opinion: ";
-                    resource = publicOpinion;
+                    resourceP += choiceOne.modifier2S;
+                    resource = resourceP;
                 }
                 else if (choiceOne.designator2S == "AR")
                 {
                     designator = "Axiom Reserve: ";
-                    resource = axiomReserve;
+                    resourceR += choiceOne.modifier2S;
+                    resource = resourceR;
                 }
 
-                GameObject.FindGameObjectWithTag(choiceOne.designator2S).GetComponent<TextMeshProUGUI>().text = designator + (resource + choiceOne.modifier2S);
+                GameObject.FindGameObjectWithTag(choiceOne.designator2S).GetComponent<TextMeshProUGUI>().text = designator + (resource);
                 return;
             }
         }
@@ -152,15 +165,17 @@ public class ChoiceManager: MonoBehaviour
                 if (choiceTwo.designatorF == "PO")
                 {
                     designator = "Public Opinion: ";
-                    resource = publicOpinion;
+                    resourceP += choiceTwo.modifierF;
+                    resource = resourceP;
                 }
                 else if (choiceTwo.designatorF == "AR")
                 {
                     designator = "Axiom Reserve: ";
-                    resource = axiomReserve;
+                    resourceR += choiceTwo.modifierF;
+                    resource = resourceR;
                 }
 
-                GameObject.FindGameObjectWithTag(choiceTwo.designatorF).GetComponent<TextMeshProUGUI>().text = designator + (resource + choiceTwo.modifierF);
+                GameObject.FindGameObjectWithTag(choiceTwo.designatorF).GetComponent<TextMeshProUGUI>().text = designator + (resource);
                 return;
             }
             if (choiceS[1] == true)
@@ -168,15 +183,17 @@ public class ChoiceManager: MonoBehaviour
                 if (choiceTwo.designatorS == "PO")
                 {
                     designator = "Public Opinion: ";
-                    resource = publicOpinion;
+                    resourceP += choiceTwo.modifierS;
+                    resource = resourceP;
                 }
                 else if (choiceTwo.designatorS == "AR")
                 {
                     designator = "Axiom Reserve: ";
-                    resource = axiomReserve;
+                    resourceR += choiceTwo.modifierS;
+                    resource = resourceR;
                 }
 
-                GameObject.FindGameObjectWithTag(choiceTwo.designatorS).GetComponent<TextMeshProUGUI>().text = designator + (resource + choiceTwo.modifierS);
+                GameObject.FindGameObjectWithTag(choiceTwo.designatorS).GetComponent<TextMeshProUGUI>().text = designator + (resource);
                 return;
             }
         }
@@ -187,15 +204,17 @@ public class ChoiceManager: MonoBehaviour
                 if (choiceTwo.designator2F == "PO")
                 {
                     designator = "Public Opinion: ";
-                    resource = publicOpinion;
+                    resourceP += choiceTwo.modifier2F;
+                    resource = resourceP;
                 }
                 else if (choiceTwo.designator2F == "AR")
                 {
                     designator = "Axiom Reserve: ";
-                    resource = axiomReserve;
+                    resourceR += choiceTwo.modifier2F;
+                    resource = resourceR;
                 }
 
-                GameObject.FindGameObjectWithTag(choiceTwo.designator2F).GetComponent<TextMeshProUGUI>().text = designator + (resource + choiceTwo.modifier2F);
+                GameObject.FindGameObjectWithTag(choiceTwo.designator2F).GetComponent<TextMeshProUGUI>().text = designator + (resource);
                 return;
             }
             if (choiceS[1] == true)
@@ -203,15 +222,17 @@ public class ChoiceManager: MonoBehaviour
                 if (choiceTwo.designator2S == "PO")
                 {
                     designator = "Public Opinion: ";
-                    resource = publicOpinion;
+                    resourceP += choiceTwo.modifier2S;
+                    resource = resourceP;
                 }
                 else if (choiceTwo.designator2S == "AR")
                 {
                     designator = "Axiom Reserve: ";
-                    resource = axiomReserve;
+                    resourceR += choiceTwo.modifier2S;
+                    resource = resourceR;
                 }
 
-                GameObject.FindGameObjectWithTag(choiceTwo.designator2S).GetComponent<TextMeshProUGUI>().text = designator + (resource + choiceTwo.modifier2S);
+                GameObject.FindGameObjectWithTag(choiceTwo.designator2S).GetComponent<TextMeshProUGUI>().text = designator + (resource);
                 return;
             }
         }
@@ -222,15 +243,17 @@ public class ChoiceManager: MonoBehaviour
                 if (choiceThree.designatorF == "PO")
                 {
                     designator = "Public Opinion: ";
-                    resource = publicOpinion;
+                    resourceP += choiceThree.modifierF;
+                    resource = resourceR;
                 }
                 else if (choiceThree.designatorF == "AR")
                 {
                     designator = "Axiom Reserve: ";
-                    resource = axiomReserve;
+                    resourceR += choiceThree.modifierF;
+                    resource = resourceP;
                 }
 
-                GameObject.FindGameObjectWithTag(choiceThree.designatorF).GetComponent<TextMeshProUGUI>().text = designator + (resource + choiceThree.modifierF);
+                GameObject.FindGameObjectWithTag(choiceThree.designatorF).GetComponent<TextMeshProUGUI>().text = designator + (resource);
                 return;
             }
             if (choiceS[2] == true)
@@ -238,15 +261,17 @@ public class ChoiceManager: MonoBehaviour
                 if (choiceThree.designatorS == "PO")
                 {
                     designator = "Public Opinion: ";
-                    resource = publicOpinion;
+                    resourceP += choiceThree.modifierS;
+                    resource = resourceP;
                 }
                 else if (choiceThree.designatorS == "AR")
                 {
                     designator = "Axiom Reserve: ";
-                    resource = axiomReserve;
+                    resourceP += choiceThree.modifierS;
+                    resource = resourceR;
                 }
 
-                GameObject.FindGameObjectWithTag(choiceThree.designatorS).GetComponent<TextMeshProUGUI>().text = designator + (resource + choiceThree.modifierS);
+                GameObject.FindGameObjectWithTag(choiceThree.designatorS).GetComponent<TextMeshProUGUI>().text = designator + (resource);
                 return;
             }
         }
@@ -257,15 +282,17 @@ public class ChoiceManager: MonoBehaviour
                 if (choiceThree.designator2F == "PO")
                 {
                     designator = "Public Opinion: ";
-                    resource = publicOpinion;
+                    resourceP += choiceThree.modifier2F;
+                    resource = resourceP;
                 }
                 else if (choiceThree.designator2F == "AR")
                 {
                     designator = "Axiom Reserve: ";
-                    resource = axiomReserve;
+                    resourceR += choiceThree.modifier2F;
+                    resource = resourceR;
                 }
 
-                GameObject.FindGameObjectWithTag(choiceThree.designator2F).GetComponent<TextMeshProUGUI>().text = designator + (resource + choiceThree.modifier2F);
+                GameObject.FindGameObjectWithTag(choiceThree.designator2F).GetComponent<TextMeshProUGUI>().text = designator + (resource);
                 return;
             }
             if (choiceS[2] == true)
@@ -273,15 +300,17 @@ public class ChoiceManager: MonoBehaviour
                 if (choiceThree.designator2S == "PO")
                 {
                     designator = "Public Opinion: ";
-                    resource = publicOpinion;
+                    resourceP += choiceThree.modifier2S;
+                    resource = resourceP;
                 }
                 else if (choiceThree.designator2S == "AR")
                 {
                     designator = "Axiom Reserve: ";
-                    resource = axiomReserve;
+                    resourceR += choiceThree.modifier2S;
+                    resource = resourceR;
                 }
 
-                GameObject.FindGameObjectWithTag(choiceThree.designator2S).GetComponent<TextMeshProUGUI>().text = designator + (resource + choiceThree.modifier2S);
+                GameObject.FindGameObjectWithTag(choiceThree.designator2S).GetComponent<TextMeshProUGUI>().text = designator + (resource);
                 return;
             }
         }
