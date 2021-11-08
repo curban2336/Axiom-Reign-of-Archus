@@ -17,7 +17,6 @@ public class Choice : MonoBehaviour
     private float posMax;
     private float posMin;
     public string directive;
-    public GameObject choiceManager;
 
 
     void Awake()
@@ -38,52 +37,52 @@ public class Choice : MonoBehaviour
 
     public void Press()
     {
-        if(choiceManager.GetComponent<ChoiceManager>().thresholds.Count>=3 && directive == "Left")
+        if(ChoiceManager.S.thresholds.Count>=3 && directive == "Left")
         {
-            choiceManager.GetComponent<ChoiceManager>().choice1 = false;
-            choiceManager.GetComponent<ChoiceManager>().SuccessCalculator(choiceManager.GetComponent<ChoiceManager>().choiceS[0]);
-            choiceManager.GetComponent<ChoiceManager>().ChoiceModifier();
+            ChoiceManager.S.choice1 = false;
+            ChoiceManager.S.choice1S = ChoiceManager.S.SuccessCalculator();
+            ChoiceManager.S.ChoiceModifier();
             otherChoice.GetComponent<Choice>().sendBack();
             return;
         }
-        if (choiceManager.GetComponent<ChoiceManager>().thresholds.Count <= 2 && directive == "Left")
+        if (ChoiceManager.S.thresholds.Count <= 2 && directive == "Left")
         {
-            choiceManager.GetComponent<ChoiceManager>().choice2 = false;
-            choiceManager.GetComponent<ChoiceManager>().SuccessCalculator(choiceManager.GetComponent<ChoiceManager>().choiceS[1]);
-            choiceManager.GetComponent<ChoiceManager>().ChoiceModifier();
+            ChoiceManager.S.choice2 = false;
+            ChoiceManager.S.choice2S = ChoiceManager.S.SuccessCalculator();
+            ChoiceManager.S.ChoiceModifier();
             otherChoice.GetComponent<Choice>().sendBack();
             return;
         }
-        if (choiceManager.GetComponent<ChoiceManager>().thresholds.Count <= 1 && directive == "Left")
+        if (ChoiceManager.S.thresholds.Count <= 1 && directive == "Left")
         {
-            choiceManager.GetComponent<ChoiceManager>().choice3 = false;
-            choiceManager.GetComponent<ChoiceManager>().SuccessCalculator(choiceManager.GetComponent<ChoiceManager>().choiceS[2]);
-            choiceManager.GetComponent<ChoiceManager>().ChoiceModifier();
+            ChoiceManager.S.choice3 = false;
+            ChoiceManager.S.choice3S = ChoiceManager.S.SuccessCalculator();
+            ChoiceManager.S.ChoiceModifier();
             otherChoice.GetComponent<Choice>().sendBack();
             return;
         }
 
-        if (choiceManager.GetComponent<ChoiceManager>().thresholds.Count >= 3 && directive == "Right")
+        if (ChoiceManager.S.thresholds.Count >= 3 && directive == "Right")
         {
-            choiceManager.GetComponent<ChoiceManager>().choice1 = true;
-            choiceManager.GetComponent<ChoiceManager>().SuccessCalculator(choiceManager.GetComponent<ChoiceManager>().choiceS[0]);
-            choiceManager.GetComponent<ChoiceManager>().ChoiceModifier();
+            ChoiceManager.S.choice1 = true;
+            ChoiceManager.S.choice1S = ChoiceManager.S.SuccessCalculator();
+            ChoiceManager.S.ChoiceModifier();
             otherChoice.GetComponent<Choice>().sendBack();
             return;
         }
-        if (choiceManager.GetComponent<ChoiceManager>().thresholds.Count <= 2 && directive == "Right")
+        if (ChoiceManager.S.thresholds.Count <= 2 && directive == "Right")
         {
-            choiceManager.GetComponent<ChoiceManager>().choice2 = true;
-            choiceManager.GetComponent<ChoiceManager>().SuccessCalculator(choiceManager.GetComponent<ChoiceManager>().choiceS[1]);
-            choiceManager.GetComponent<ChoiceManager>().ChoiceModifier();
+            ChoiceManager.S.choice2 = true;
+            ChoiceManager.S.choice2S = ChoiceManager.S.SuccessCalculator();
+            ChoiceManager.S.ChoiceModifier();
             otherChoice.GetComponent<Choice>().sendBack();
             return;
         }
-        if (choiceManager.GetComponent<ChoiceManager>().thresholds.Count <= 1 && directive == "Right")
+        if (ChoiceManager.S.thresholds.Count <= 1 && directive == "Right")
         {
-            choiceManager.GetComponent<ChoiceManager>().choice3 = true;
-            choiceManager.GetComponent<ChoiceManager>().SuccessCalculator(choiceManager.GetComponent<ChoiceManager>().choiceS[2]);
-            choiceManager.GetComponent<ChoiceManager>().ChoiceModifier();
+            ChoiceManager.S.choice3 = true;
+            ChoiceManager.S.choice3S = ChoiceManager.S.SuccessCalculator();
+            ChoiceManager.S.ChoiceModifier();
             otherChoice.GetComponent<Choice>().sendBack();
             return;
         }

@@ -371,7 +371,6 @@ MonoBehaviour:
   choice1S: 0
   choice2S: 0
   choice3S: 0
-  choiceS: 
   successModifier: 0
   publicOpinion: 100
   axiomReserve: 1000
@@ -698,7 +697,6 @@ MonoBehaviour:
   offScreen: {x: 0, y: 0, z: 0}
   updatePos: {x: 0, y: 0, z: 0}
   directive: Left
-  choiceManager: {fileID: 401216761}
 --- !u!114 &526447590
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -1550,7 +1548,6 @@ MonoBehaviour:
   offScreen: {x: 0, y: 0, z: 0}
   updatePos: {x: 0, y: 0, z: 0}
   directive: Right
-  choiceManager: {fileID: 401216761}
 --- !u!114 &1108164007
 MonoBehaviour:
   m_ObjectHideFlags: 0

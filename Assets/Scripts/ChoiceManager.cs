@@ -18,13 +18,13 @@ public class _choice
 
 public class ChoiceManager: MonoBehaviour
 {
+    static public ChoiceManager S;
     public bool choice1 = false;
     public bool choice2 = false;
     public bool choice3 = false;
     public bool choice1S = false;
     public bool choice2S = false;
     public bool choice3S = false;
-    public List<bool> choiceS;
     public float successModifier = 0;
     public int publicOpinion = 100;
     public int axiomReserve = 1000;
@@ -45,6 +45,7 @@ public class ChoiceManager: MonoBehaviour
     // Start is called before the first frame update
     void Start()
     {
+        S = this;
         resourceP = publicOpinion;
         resourceR = axiomReserve;
 
@@ -52,20 +53,19 @@ public class ChoiceManager: MonoBehaviour
         thresholds.Enqueue(threshold1);
         thresholds.Enqueue(threshold2);
         thresholds.Enqueue(threshold3);
-        choiceS = new List<bool>();
-        choiceS.Add(choice1S);
-        choiceS.Add(choice2S);
-        choiceS.Add(choice3S);
         POText = PO.GetComponent<TextMeshProUGUI>();
         POText.text = "Public Opinion: " + publicOpinion;
         ARText = AR.GetComponent<TextMeshProUGUI>();
         ARText.text = "Axiom Reserve: " + axiomReserve;
     }
 
-    public void SuccessCalculator(bool choice)
+    public bool SuccessCalculator()
     {
+        bool choice = false;
         float successChance = Random.Range(1f, 10f) + successModifier;
+        Debug.Log(successChance);
         int threshold = thresholds.Dequeue();
+        Debug.Log(threshold);
         if (successChance >= threshold)
         {
             choice = true;
@@ -74,6 +74,8 @@ public class ChoiceManager: MonoBehaviour
         {
             choice = false;
         }
+        Debug.Log(choice);
+        return choice;
     }
 
     public void ChoiceModifier()
@@ -82,7 +84,7 @@ public class ChoiceManager: MonoBehaviour
         int resource = 0;
         if (choice1 == false)
         {
-            if (choiceS[0] == false)
+            if (choice1S == false)
             {
                 if (choiceOne.designatorF == "PO")
                 {
@@ -100,7 +102,7 @@ public class ChoiceManager: MonoBehaviour
                 GameObject.FindGameObjectWithTag(choiceOne.designatorF).GetComponent<TextMeshProUGUI>().text = designator + (resource);
                 return;
             }
-            if (choiceS[0] == true)
+            if (choice1S == true)
             {
                 if (choiceOne.designatorS == "PO")
                 {
@@ -121,7 +123,7 @@ public class ChoiceManager: MonoBehaviour
         }
         if (choice1 == true)
         {
-            if (choiceS[0] == false)
+            if (choice1S == false)
             {
                 if (choiceOne.designator2F == "PO")
                 {
@@ -139,7 +141,7 @@ public class ChoiceManager: MonoBehaviour
                 GameObject.FindGameObjectWithTag(choiceOne.designator2F).GetComponent<TextMeshProUGUI>().text = designator + (resource);
                 return;
             }
-            if (choiceS[0] == true)
+            if (choice1S == true)
             {
                 if (choiceOne.designator2S == "PO")
                 {
@@ -160,7 +162,7 @@ public class ChoiceManager: MonoBehaviour
         }
         if (choice2 == false)
         {
-            if (choiceS[1] == false)
+            if (choice2S == false)
             {
                 if (choiceTwo.designatorF == "PO")
                 {
@@ -178,7 +180,7 @@ public class ChoiceManager: MonoBehaviour
                 GameObject.FindGameObjectWithTag(choiceTwo.designatorF).GetComponent<TextMeshProUGUI>().text = designator + (resource);
                 return;
             }
-            if (choiceS[1] == true)
+            if (choice2S == true)
             {
                 if (choiceTwo.designatorS == "PO")
                 {
@@ -199,7 +201,7 @@ public class ChoiceManager: MonoBehaviour
         }
         if (choice2 == true)
         {
-            if (choiceS[1] == false)
+            if (choice2S == false)
             {
                 if (choiceTwo.designator2F == "PO")
                 {
@@ -217,7 +219,7 @@ public class ChoiceManager: MonoBehaviour
                 GameObject.FindGameObjectWithTag(choiceTwo.designator2F).GetComponent<TextMeshProUGUI>().text = designator + (resource);
                 return;
             }
-            if (choiceS[1] == true)
+            if (choice2S == true)
             {
                 if (choiceTwo.designator2S == "PO")
                 {
@@ -238,7 +240,7 @@ public class ChoiceManager: MonoBehaviour
         }
         if (choice3 == false)
         {
-            if (choiceS[2] == false)
+            if (choice3S == false)
             {
                 if (choiceThree.designatorF == "PO")
                 {
@@ -256,7 +258,7 @@ public class ChoiceManager: MonoBehaviour
                 GameObject.FindGameObjectWithTag(choiceThree.designatorF).GetComponent<TextMeshProUGUI>().text = designator + (resource);
                 return;
             }
-            if (choiceS[2] == true)
+            if (choice3S == true)
             {
                 if (choiceThree.designatorS == "PO")
                 {
@@ -277,7 +279,7 @@ public class ChoiceManager: MonoBehaviour
         }
         if (choice3 == true)
         {
-            if (choiceS[2] == false)
+            if (choice3S == false)
             {
                 if (choiceThree.designator2F == "PO")
                 {
@@ -295,7 +297,7 @@ public class ChoiceManager: MonoBehaviour
                 GameObject.FindGameObjectWithTag(choiceThree.designator2F).GetComponent<TextMeshProUGUI>().text = designator + (resource);
                 return;
             }
-            if (choiceS[2] == true)
+            if (choice3S == true)
             {
                 if (choiceThree.designator2S == "PO")
                 {
