@@ -384,14 +384,14 @@ MonoBehaviour:
   PO: {fileID: 1536738145}
   AR: {fileID: 625805489}
   choiceOne:
-    modifierS: 100
-    modifierF: -50
-    designatorS: PO
+    modifierS: -250
+    modifierF: -250
+    designatorS: AR
     designatorF: AR
-    modifier2S: 100
-    modifier2F: -50
+    modifier2S: 25
+    modifier2F: 25
     designator2S: PO
-    designator2F: AR
+    designator2F: PO
   choiceTwo:
     modifierS: 100
     modifierF: -50

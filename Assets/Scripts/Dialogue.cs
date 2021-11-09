@@ -123,7 +123,7 @@ public class Dialogue : MonoBehaviour
             Text.text = originalText;
             displayedText = Text.text.Insert(alphaIndex, "<color=#00000000>");
             Text.text = displayedText;
-            yield return new WaitForSeconds(0.03f);
+            yield return new WaitForSeconds(0.02f);
         }
         yield return null;
     }
