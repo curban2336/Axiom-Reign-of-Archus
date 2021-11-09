@@ -1544,7 +1544,7 @@ MonoBehaviour:
   button: {fileID: 1108164001}
   otherChoice: {fileID: 526447584}
   Decision: {fileID: 267495696}
-  posX: 1400
+  posX: 1550
   offScreen: {x: 0, y: 0, z: 0}
   updatePos: {x: 0, y: 0, z: 0}
   directive: Right
