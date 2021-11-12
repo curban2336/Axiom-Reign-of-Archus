@@ -35354,9 +35354,9 @@ IL_006f:
 		TMP_Text_t86179C97C713E1A6B3751B48DC7A16C874A7B262 * L_25 = L_24->get_Text_4();
 		String_t* L_26 = V_2;
 		VirtActionInvoker1< String_t* >::Invoke(66 /* System.Void TMPro.TMP_Text::set_text(System.String) */, L_25, L_26);
-		// yield return new WaitForSeconds(0.03f);
+		// yield return new WaitForSeconds(0.02f);
 		WaitForSeconds_t8F9189BE6E467C98C99177038881F8982E0E4013 * L_27 = (WaitForSeconds_t8F9189BE6E467C98C99177038881F8982E0E4013 *)il2cpp_codegen_object_new(WaitForSeconds_t8F9189BE6E467C98C99177038881F8982E0E4013_il2cpp_TypeInfo_var);
-		WaitForSeconds__ctor_mD298C4CB9532BBBDE172FC40F3397E30504038D4(L_27, (0.0299999993f), /*hidden argument*/NULL);
+		WaitForSeconds__ctor_mD298C4CB9532BBBDE172FC40F3397E30504038D4(L_27, (0.0199999996f), /*hidden argument*/NULL);
 		__this->set_U3CU3E2__current_1(L_27);
 		__this->set_U3CU3E1__state_0(1);
 		return (bool)1;
