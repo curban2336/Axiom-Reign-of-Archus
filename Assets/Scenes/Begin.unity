@@ -393,21 +393,21 @@ MonoBehaviour:
     designator2S: PO
     designator2F: PO
   choiceTwo:
-    modifierS: 100
-    modifierF: -50
-    designatorS: PO
+    modifierS: -20
+    modifierF: -20
+    designatorS: AR
     designatorF: AR
-    modifier2S: 100
-    modifier2F: -50
+    modifier2S: 0
+    modifier2F: 0
     designator2S: PO
-    designator2F: AR
+    designator2F: PO
   choiceThree:
-    modifierS: 100
-    modifierF: -50
-    designatorS: PO
+    modifierS: -25
+    modifierF: -25
+    designatorS: AR
     designatorF: AR
-    modifier2S: 100
-    modifier2F: -50
+    modifier2S: -15
+    modifier2F: -25
     designator2S: PO
     designator2F: AR
 --- !u!4 &401216763

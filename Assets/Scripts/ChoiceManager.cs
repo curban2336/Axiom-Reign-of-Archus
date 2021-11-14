@@ -78,7 +78,7 @@ public class ChoiceManager: MonoBehaviour
         return choice;
     }
 
-    public void ChoiceModifier()
+    public void ChoiceModifier1()
     {
         string designator = "";
         int resource = 0;
@@ -160,6 +160,12 @@ public class ChoiceManager: MonoBehaviour
                 return;
             }
         }
+    }
+
+    public void ChoiceModifier2()
+    {
+        string designator = "";
+        int resource = 0;
         if (choice2 == false)
         {
             if (choice2S == false)
@@ -238,6 +244,12 @@ public class ChoiceManager: MonoBehaviour
                 return;
             }
         }
+    }
+
+    public void ChoiceModifier3()
+    {
+        string designator = "";
+        int resource = 0;
         if (choice3 == false)
         {
             if (choice3S == false)
