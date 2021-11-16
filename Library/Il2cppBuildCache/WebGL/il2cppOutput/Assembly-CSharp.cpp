@@ -26123,8 +26123,8 @@ IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR void ChoiceManager_ChoiceModifier3_m15D90FA2D
 		_choice_t34EBBB2D9EFE699ABF23B26F971E892FD98D6417 * L_6 = __this->get_choiceThree_26();
 		int32_t L_7 = L_6->get_modifierF_1();
 		__this->set_resourceP_15(((int32_t)il2cpp_codegen_add((int32_t)L_5, (int32_t)L_7)));
-		// resource = resourceR;
-		int32_t L_8 = __this->get_resourceR_14();
+		// resource = resourceP;
+		int32_t L_8 = __this->get_resourceP_15();
 		V_1 = L_8;
 		// }
 		goto IL_0098;
@@ -26150,8 +26150,8 @@ IL_005c:
 		_choice_t34EBBB2D9EFE699ABF23B26F971E892FD98D6417 * L_13 = __this->get_choiceThree_26();
 		int32_t L_14 = L_13->get_modifierF_1();
 		__this->set_resourceR_14(((int32_t)il2cpp_codegen_add((int32_t)L_12, (int32_t)L_14)));
-		// resource = resourceP;
-		int32_t L_15 = __this->get_resourceP_15();
+		// resource = resourceR;
+		int32_t L_15 = __this->get_resourceR_14();
 		V_1 = L_15;
 	}
 
@@ -26224,11 +26224,11 @@ IL_0109:
 	{
 		// designator = "Axiom Reserve: ";
 		V_0 = _stringLiteralEDA02673205E78BF097C9A16CB86EDC0A1EB3CBB;
-		// resourceP += choiceThree.modifierS;
-		int32_t L_34 = __this->get_resourceP_15();
+		// resourceR += choiceThree.modifierS;
+		int32_t L_34 = __this->get_resourceR_14();
 		_choice_t34EBBB2D9EFE699ABF23B26F971E892FD98D6417 * L_35 = __this->get_choiceThree_26();
 		int32_t L_36 = L_35->get_modifierS_0();
-		__this->set_resourceP_15(((int32_t)il2cpp_codegen_add((int32_t)L_34, (int32_t)L_36)));
+		__this->set_resourceR_14(((int32_t)il2cpp_codegen_add((int32_t)L_34, (int32_t)L_36)));
 		// resource = resourceR;
 		int32_t L_37 = __this->get_resourceR_14();
 		V_1 = L_37;
