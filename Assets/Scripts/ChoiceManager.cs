@@ -258,13 +258,13 @@ public class ChoiceManager: MonoBehaviour
                 {
                     designator = "Public Opinion: ";
                     resourceP += choiceThree.modifierF;
-                    resource = resourceR;
+                    resource = resourceP;
                 }
                 else if (choiceThree.designatorF == "AR")
                 {
                     designator = "Axiom Reserve: ";
                     resourceR += choiceThree.modifierF;
-                    resource = resourceP;
+                    resource = resourceR;
                 }
 
                 GameObject.FindGameObjectWithTag(choiceThree.designatorF).GetComponent<TextMeshProUGUI>().text = designator + (resource);
@@ -281,7 +281,7 @@ public class ChoiceManager: MonoBehaviour
                 else if (choiceThree.designatorS == "AR")
                 {
                     designator = "Axiom Reserve: ";
-                    resourceP += choiceThree.modifierS;
+                    resourceR += choiceThree.modifierS;
                     resource = resourceR;
                 }
 
