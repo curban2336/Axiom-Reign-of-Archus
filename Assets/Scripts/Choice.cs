@@ -9,6 +9,7 @@ public class Choice : MonoBehaviour
 
     public GameObject button;
     public GameObject otherChoice;
+    public GameObject dialogue;
     public TMP_Text Decision;
     public float posX;
     private float tempPos;
@@ -30,125 +31,129 @@ public class Choice : MonoBehaviour
     {
         updatePos = button.transform.position;
         updatePos.x = posX;
-        tempPos = 0.4f;
+        tempPos = 100f;
         button.transform.position = updatePos;
         offScreen = button.transform.position;
     }
 
     public void Press()
     {
-        if(ChoiceManager.S.thresholds.Count==3 && directive == "Left")
+        if (ChoiceManager.S.canClick == true)
         {
-            ChoiceManager.S.choice1 = false;
-            ChoiceManager.S.choice1S = ChoiceManager.S.SuccessCalculator();
-            if(ChoiceManager.S.choice1S = true)
+            button.GetComponent<Interactable>().TriggerDialogue();
+            dialogue.GetComponent<Dialogue>().Increment();
+            if (ChoiceManager.S.thresholds.Count == 3 && directive == "Left")
             {
-                ChoiceManager.S.successModifier += 1.3f;
+                ChoiceManager.S.choice1 = false;
+                ChoiceManager.S.choice1S = ChoiceManager.S.SuccessCalculator();
+                if (ChoiceManager.S.choice1S == true)
+                {
+                    ChoiceManager.S.successModifier += 1.3f;
+                }
+                else if (ChoiceManager.S.choice1S == false)
+                {
+                    ChoiceManager.S.successModifier -= 1.3f;
+                }
+                ChoiceManager.S.ChoiceModifier1();
+                otherChoice.GetComponent<Choice>().sendBack();
+                return;
             }
-            else if (ChoiceManager.S.choice1S = false)
+            if (ChoiceManager.S.thresholds.Count == 2 && directive == "Left")
             {
-                ChoiceManager.S.successModifier -= 1.3f;
+                ChoiceManager.S.choice2 = false;
+                ChoiceManager.S.choice2S = ChoiceManager.S.SuccessCalculator();
+                if (ChoiceManager.S.choice2S == true)
+                {
+                    ChoiceManager.S.successModifier += 0.5f;
+                }
+                else if (ChoiceManager.S.choice2S == false)
+                {
+                    ChoiceManager.S.successModifier -= 0.5f;
+                }
+                ChoiceManager.S.ChoiceModifier2();
+                otherChoice.GetComponent<Choice>().sendBack();
+                return;
             }
-            ChoiceManager.S.ChoiceModifier1();
-            otherChoice.GetComponent<Choice>().sendBack();
-            return;
-        }
-        if (ChoiceManager.S.thresholds.Count == 2 && directive == "Left")
-        {
-            ChoiceManager.S.choice2 = false;
-            ChoiceManager.S.choice2S = ChoiceManager.S.SuccessCalculator();
-            if (ChoiceManager.S.choice2S = true)
+            if (ChoiceManager.S.thresholds.Count == 1 && directive == "Left")
             {
-                ChoiceManager.S.successModifier += 0.5f;
+                ChoiceManager.S.choice3 = false;
+                ChoiceManager.S.choice3S = ChoiceManager.S.SuccessCalculator();
+                if (ChoiceManager.S.choice3S == true)
+                {
+                    ChoiceManager.S.successModifier += 0.6f;
+                }
+                else if (ChoiceManager.S.choice3S == false)
+                {
+                    ChoiceManager.S.successModifier -= 0.6f;
+                }
+                ChoiceManager.S.ChoiceModifier3();
+                otherChoice.GetComponent<Choice>().sendBack();
+                return;
             }
-            else if (ChoiceManager.S.choice2S = false)
-            {
-                ChoiceManager.S.successModifier -= 0.5f;
-            }
-            ChoiceManager.S.ChoiceModifier2();
-            otherChoice.GetComponent<Choice>().sendBack();
-            return;
-        }
-        if (ChoiceManager.S.thresholds.Count == 1 && directive == "Left")
-        {
-            ChoiceManager.S.choice3 = false;
-            ChoiceManager.S.choice3S = ChoiceManager.S.SuccessCalculator();
-            if (ChoiceManager.S.choice3S = true)
-            {
-                ChoiceManager.S.successModifier += 0.6f;
-            }
-            else if (ChoiceManager.S.choice3S = false)
-            {
-                ChoiceManager.S.successModifier -= 0.6f;
-            }
-            ChoiceManager.S.ChoiceModifier3();
-            otherChoice.GetComponent<Choice>().sendBack();
-            return;
-        }
 
-        if (ChoiceManager.S.thresholds.Count == 3 && directive == "Right")
-        {
-            ChoiceManager.S.choice1 = true;
-            ChoiceManager.S.choice1S = ChoiceManager.S.SuccessCalculator();
-            ChoiceManager.S.ChoiceModifier1();
-            otherChoice.GetComponent<Choice>().sendBack();
-            return;
-        }
-        if (ChoiceManager.S.thresholds.Count == 2 && directive == "Right")
-        {
-            ChoiceManager.S.choice2 = true;
-            ChoiceManager.S.choice2S = ChoiceManager.S.SuccessCalculator();
-            if (ChoiceManager.S.choice2S = true)
+            if (ChoiceManager.S.thresholds.Count == 3 && directive == "Right")
             {
-                ChoiceManager.S.successModifier += 1f;
+                ChoiceManager.S.choice1 = true;
+                ChoiceManager.S.choice1S = ChoiceManager.S.SuccessCalculator();
+                ChoiceManager.S.ChoiceModifier1();
+                otherChoice.GetComponent<Choice>().sendBack();
+                return;
             }
-            ChoiceManager.S.ChoiceModifier2();
-            otherChoice.GetComponent<Choice>().sendBack();
-            return;
-        }
-        if (ChoiceManager.S.thresholds.Count == 1 && directive == "Right")
-        {
-            ChoiceManager.S.choice3 = true;
-            ChoiceManager.S.choice3S = ChoiceManager.S.SuccessCalculator();
-            ChoiceManager.S.ChoiceModifier3();
-            otherChoice.GetComponent<Choice>().sendBack();
-            return;
+            if (ChoiceManager.S.thresholds.Count == 2 && directive == "Right")
+            {
+                ChoiceManager.S.choice2 = true;
+                ChoiceManager.S.choice2S = ChoiceManager.S.SuccessCalculator();
+                if (ChoiceManager.S.choice2S == true)
+                {
+                    ChoiceManager.S.successModifier += 1f;
+                }
+                ChoiceManager.S.ChoiceModifier2();
+                otherChoice.GetComponent<Choice>().sendBack();
+                return;
+            }
+            if (ChoiceManager.S.thresholds.Count == 1 && directive == "Right")
+            {
+                ChoiceManager.S.choice3 = true;
+                ChoiceManager.S.choice3S = ChoiceManager.S.SuccessCalculator();
+                ChoiceManager.S.ChoiceModifier3();
+                otherChoice.GetComponent<Choice>().sendBack();
+                return;
+            }
         }
     }
 
     public void callChoice()
     {
+        ChoiceManager.S.canClick = true;
         if (updatePos.x >= posMax)
         {
-            updatePos.x -= tempPos;
+            updatePos.x -= tempPos * Time.deltaTime;
             button.transform.position = updatePos;
-            Invoke("callChoice", 0.01f);
+            Invoke("callChoice", 0.001f);
         }
         else if (updatePos.x <= posMin)
         {
-            updatePos.x += tempPos;
+            updatePos.x += tempPos * Time.deltaTime;
             button.transform.position = updatePos;
-            Invoke("callChoice", 0.01f);
+            Invoke("callChoice", 0.001f);
         }
     }
 
     public void sendBack()
     {
-
         if (button.transform.position.x > offScreen.x)
         {
-            updatePos.x -= tempPos;
+            updatePos.x -= tempPos * Time.deltaTime;
             button.transform.position = updatePos;
             Decision.text = "";
-            Invoke("sendBack", 0.01f);
+            Invoke("sendBack", 0.001f);
         }
         else if (button.transform.position.x < offScreen.x)
         {
-            updatePos.x += tempPos;
+            updatePos.x += tempPos * Time.deltaTime;
             button.transform.position = updatePos;
             Decision.text = "";
-            Invoke("sendBack", 0.01f);
+            Invoke("sendBack", 0.001f);
         }
-
     }
 }

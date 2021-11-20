@@ -371,6 +371,7 @@ MonoBehaviour:
   choice1S: 0
   choice2S: 0
   choice3S: 0
+  canClick: 1
   successModifier: 0
   publicOpinion: 100
   axiomReserve: 1000
@@ -594,7 +595,7 @@ MonoBehaviour:
       m_Calls:
       - m_Target: {fileID: 526447589}
         m_TargetAssemblyTypeName: Choice, Assembly-CSharp
-        m_MethodName: Press
+        m_MethodName: sendBack
         m_Mode: 1
         m_Arguments:
           m_ObjectArgument: {fileID: 0}
@@ -606,31 +607,7 @@ MonoBehaviour:
         m_CallState: 2
       - m_Target: {fileID: 526447589}
         m_TargetAssemblyTypeName: Choice, Assembly-CSharp
-        m_MethodName: sendBack
-        m_Mode: 1
-        m_Arguments:
-          m_ObjectArgument: {fileID: 0}
-          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
-          m_IntArgument: 0
-          m_FloatArgument: 0
-          m_StringArgument: 
-          m_BoolArgument: 0
-        m_CallState: 2
-      - m_Target: {fileID: 526447590}
-        m_TargetAssemblyTypeName: Interactable, Assembly-CSharp
-        m_MethodName: TriggerDialogue
-        m_Mode: 1
-        m_Arguments:
-          m_ObjectArgument: {fileID: 0}
-          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
-          m_IntArgument: 0
-          m_FloatArgument: 0
-          m_StringArgument: 
-          m_BoolArgument: 0
-        m_CallState: 2
-      - m_Target: {fileID: 848050972}
-        m_TargetAssemblyTypeName: Dialogue, Assembly-CSharp
-        m_MethodName: Increment
+        m_MethodName: Press
         m_Mode: 1
         m_Arguments:
           m_ObjectArgument: {fileID: 0}
@@ -692,6 +669,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   button: {fileID: 526447584}
   otherChoice: {fileID: 1108164001}
+  dialogue: {fileID: 848050969}
   Decision: {fileID: 267495696}
   posX: -250
   offScreen: {x: 0, y: 0, z: 0}
@@ -1445,7 +1423,7 @@ MonoBehaviour:
       m_Calls:
       - m_Target: {fileID: 1108164006}
         m_TargetAssemblyTypeName: Choice, Assembly-CSharp
-        m_MethodName: Press
+        m_MethodName: sendBack
         m_Mode: 1
         m_Arguments:
           m_ObjectArgument: {fileID: 0}
@@ -1457,31 +1435,7 @@ MonoBehaviour:
         m_CallState: 2
       - m_Target: {fileID: 1108164006}
         m_TargetAssemblyTypeName: Choice, Assembly-CSharp
-        m_MethodName: sendBack
-        m_Mode: 1
-        m_Arguments:
-          m_ObjectArgument: {fileID: 0}
-          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
-          m_IntArgument: 0
-          m_FloatArgument: 0
-          m_StringArgument: 
-          m_BoolArgument: 0
-        m_CallState: 2
-      - m_Target: {fileID: 1108164007}
-        m_TargetAssemblyTypeName: Interactable, Assembly-CSharp
-        m_MethodName: TriggerDialogue
-        m_Mode: 1
-        m_Arguments:
-          m_ObjectArgument: {fileID: 0}
-          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
-          m_IntArgument: 0
-          m_FloatArgument: 0
-          m_StringArgument: 
-          m_BoolArgument: 0
-        m_CallState: 2
-      - m_Target: {fileID: 848050972}
-        m_TargetAssemblyTypeName: Dialogue, Assembly-CSharp
-        m_MethodName: Increment
+        m_MethodName: Press
         m_Mode: 1
         m_Arguments:
           m_ObjectArgument: {fileID: 0}
@@ -1543,8 +1497,9 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   button: {fileID: 1108164001}
   otherChoice: {fileID: 526447584}
+  dialogue: {fileID: 848050969}
   Decision: {fileID: 267495696}
-  posX: 1550
+  posX: 1350
   offScreen: {x: 0, y: 0, z: 0}
   updatePos: {x: 0, y: 0, z: 0}
   directive: Right

@@ -98,7 +98,7 @@ public class Dialogue : MonoBehaviour
     {
         if (names.Count == 0)
         {
-            if(stopIncrement == false)
+            if (stopIncrement == false)
             {
                 i++;
                 stopIncrement = true;

@@ -23,8 +23,8 @@ public class Menu : MonoBehaviour
     void Start()
     {
         updatePos = button.transform.position;
-        updatePos.y = -35;
-        tempPos = 0.1f;
+        updatePos.y = -40;
+        tempPos = 100f;
         button.transform.position = updatePos;
     }
 
@@ -35,11 +35,10 @@ public class Menu : MonoBehaviour
         {
             posConfirm = true;
             Menu.S++;
-            Debug.Log("S: " + Menu.S);
         }
         else if (updatePos.y <= posMin)
         {
-            updatePos.y += tempPos;
+            updatePos.y += tempPos * Time.deltaTime;
             button.transform.position = updatePos;
         }
     }
