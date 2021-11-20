@@ -60,18 +60,18 @@ extern void Dialogue_DisplayText_m18FA26810F7F2697B4DC119E99F76A19BF74BA1D (void
 extern void Dialogue_Update_m1FDF6C9B65E25D3F4706149D82055051FF0FF94F (void);
 // 0x00000018 System.Void Dialogue::.ctor()
 extern void Dialogue__ctor_m76C11FD80AFD4F6BE87E30C737879EBB5A1D724E (void);
-// 0x00000019 System.Void Dialogue/<DisplayText>d__25::.ctor(System.Int32)
-extern void U3CDisplayTextU3Ed__25__ctor_mED51623FF2529C1632195CF45E54F24F2558A283 (void);
-// 0x0000001A System.Void Dialogue/<DisplayText>d__25::System.IDisposable.Dispose()
-extern void U3CDisplayTextU3Ed__25_System_IDisposable_Dispose_m06019CE93A7A814C587653E1F153E830EE09BCCC (void);
-// 0x0000001B System.Boolean Dialogue/<DisplayText>d__25::MoveNext()
-extern void U3CDisplayTextU3Ed__25_MoveNext_mB38474E44484F5B1154138ED638B9D254360CF35 (void);
-// 0x0000001C System.Object Dialogue/<DisplayText>d__25::System.Collections.Generic.IEnumerator<System.Object>.get_Current()
-extern void U3CDisplayTextU3Ed__25_System_Collections_Generic_IEnumeratorU3CSystem_ObjectU3E_get_Current_m12D3C97D58C03357CD399D0301C2C6CEAAEA4F2E (void);
-// 0x0000001D System.Void Dialogue/<DisplayText>d__25::System.Collections.IEnumerator.Reset()
-extern void U3CDisplayTextU3Ed__25_System_Collections_IEnumerator_Reset_mC4ECC7E8AD9BF6A51100A58B41243EEE8B1D30CF (void);
-// 0x0000001E System.Object Dialogue/<DisplayText>d__25::System.Collections.IEnumerator.get_Current()
-extern void U3CDisplayTextU3Ed__25_System_Collections_IEnumerator_get_Current_mC28EDC6D4CFDF581C28344D62158D1A4D2CC70B3 (void);
+// 0x00000019 System.Void Dialogue/<DisplayText>d__27::.ctor(System.Int32)
+extern void U3CDisplayTextU3Ed__27__ctor_mF53CC12D9B28DADEE312BFE507D29990B2D79128 (void);
+// 0x0000001A System.Void Dialogue/<DisplayText>d__27::System.IDisposable.Dispose()
+extern void U3CDisplayTextU3Ed__27_System_IDisposable_Dispose_m78F3AC54651F7D766E3763EDBC1C945024D1EDCF (void);
+// 0x0000001B System.Boolean Dialogue/<DisplayText>d__27::MoveNext()
+extern void U3CDisplayTextU3Ed__27_MoveNext_mF0B5650EA576EE00E535CB20F5E29E32C76DFFEF (void);
+// 0x0000001C System.Object Dialogue/<DisplayText>d__27::System.Collections.Generic.IEnumerator<System.Object>.get_Current()
+extern void U3CDisplayTextU3Ed__27_System_Collections_Generic_IEnumeratorU3CSystem_ObjectU3E_get_Current_mA16D56CE614FFF08BEE3BADE24A8330153F91B0E (void);
+// 0x0000001D System.Void Dialogue/<DisplayText>d__27::System.Collections.IEnumerator.Reset()
+extern void U3CDisplayTextU3Ed__27_System_Collections_IEnumerator_Reset_mA2A608A59469310D25FED3A56542EF7E31B8A787 (void);
+// 0x0000001E System.Object Dialogue/<DisplayText>d__27::System.Collections.IEnumerator.get_Current()
+extern void U3CDisplayTextU3Ed__27_System_Collections_IEnumerator_get_Current_m0BC0E00C9D496D92EFEC76E9F12DB87634D6690A (void);
 // 0x0000001F System.Void Interactable::TriggerDialogue()
 extern void Interactable_TriggerDialogue_mBEB0C739C5C619D270A6687124C3EEA4EFFD16BB (void);
 // 0x00000020 System.Void Interactable::.ctor()
@@ -662,12 +662,12 @@ static Il2CppMethodPointer s_methodPointers[312] =
 	Dialogue_DisplayText_m18FA26810F7F2697B4DC119E99F76A19BF74BA1D,
 	Dialogue_Update_m1FDF6C9B65E25D3F4706149D82055051FF0FF94F,
 	Dialogue__ctor_m76C11FD80AFD4F6BE87E30C737879EBB5A1D724E,
-	U3CDisplayTextU3Ed__25__ctor_mED51623FF2529C1632195CF45E54F24F2558A283,
-	U3CDisplayTextU3Ed__25_System_IDisposable_Dispose_m06019CE93A7A814C587653E1F153E830EE09BCCC,
-	U3CDisplayTextU3Ed__25_MoveNext_mB38474E44484F5B1154138ED638B9D254360CF35,
-	U3CDisplayTextU3Ed__25_System_Collections_Generic_IEnumeratorU3CSystem_ObjectU3E_get_Current_m12D3C97D58C03357CD399D0301C2C6CEAAEA4F2E,
-	U3CDisplayTextU3Ed__25_System_Collections_IEnumerator_Reset_mC4ECC7E8AD9BF6A51100A58B41243EEE8B1D30CF,
-	U3CDisplayTextU3Ed__25_System_Collections_IEnumerator_get_Current_mC28EDC6D4CFDF581C28344D62158D1A4D2CC70B3,
+	U3CDisplayTextU3Ed__27__ctor_mF53CC12D9B28DADEE312BFE507D29990B2D79128,
+	U3CDisplayTextU3Ed__27_System_IDisposable_Dispose_m78F3AC54651F7D766E3763EDBC1C945024D1EDCF,
+	U3CDisplayTextU3Ed__27_MoveNext_mF0B5650EA576EE00E535CB20F5E29E32C76DFFEF,
+	U3CDisplayTextU3Ed__27_System_Collections_Generic_IEnumeratorU3CSystem_ObjectU3E_get_Current_mA16D56CE614FFF08BEE3BADE24A8330153F91B0E,
+	U3CDisplayTextU3Ed__27_System_Collections_IEnumerator_Reset_mA2A608A59469310D25FED3A56542EF7E31B8A787,
+	U3CDisplayTextU3Ed__27_System_Collections_IEnumerator_get_Current_m0BC0E00C9D496D92EFEC76E9F12DB87634D6690A,
 	Interactable_TriggerDialogue_mBEB0C739C5C619D270A6687124C3EEA4EFFD16BB,
 	Interactable__ctor_m14A127716816AD709C7F0004EEC27A89E8EAE8D3,
 	Menu_Awake_mC6D9273D153EC4E830E40BC8820105394CE6835B,

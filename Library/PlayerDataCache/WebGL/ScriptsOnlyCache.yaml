@@ -13,6 +13,7 @@ ScriptsOnlyBuild:
     - UnityEditor.U2D.Animation.BoneGizmo
     Unity.2D.IK.Editor.dll:
     - UnityEditor.U2D.IK.IKEditorManager
+    - UnityEditor.U2D.IK.IKGizmos
     Unity.2D.IK.Runtime.dll:
     - UnityEditor.U2D.IK.IKEditorManagerHelper
     Unity.2D.Tilemap.Editor.dll:
@@ -261,7 +262,7 @@ ScriptsOnlyBuild:
     className: TMP_InputField
   - hash:
       serializedVersion: 2
-      Hash: 6888138ba29702a5b237b092f2e6a56f
+      Hash: bd76b87ba432e326d89ce7cbfca706c1
     assemblyName: Assembly-CSharp.dll
     namespaceName: 
     className: ChoiceManager
@@ -879,7 +880,7 @@ ScriptsOnlyBuild:
     className: Interactable
   - hash:
       serializedVersion: 2
-      Hash: a2d7e7cde92bc8bfead08613bfc18d12
+      Hash: 00e5bef50fbb8e08f5742ea1e0600d10
     assemblyName: Assembly-CSharp.dll
     namespaceName: 
     className: Dialogue
@@ -951,7 +952,7 @@ ScriptsOnlyBuild:
     className: ObjectSpin
   - hash:
       serializedVersion: 2
-      Hash: f239f77bbc53edaab2980987b5f3afa5
+      Hash: 437ed670e1033894dfa4fbd73814d3b0
     assemblyName: Assembly-CSharp.dll
     namespaceName: 
     className: Choice
@@ -1014,4 +1015,4 @@ ScriptsOnlyBuild:
   - Assets/Scenes/Menu.unity
   - Assets/Scenes/Tutorial.unity
   - Assets/Scenes/Begin.unity
-  playerPath: D:/Github/Real github/Axiom-Reign-of-Archus True/ProofBuild
+  playerPath: D:/Github/Real github/Axiom-Reign-of-Archus True/Build2
