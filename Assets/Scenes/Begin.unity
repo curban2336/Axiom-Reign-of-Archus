@@ -976,6 +976,12 @@ MonoBehaviour:
   i: 1
   j: 0
   counter: 140000002600000035000000
+  faces:
+  - {fileID: 1695902573766999066, guid: f18221d102cf8d4499826187dc38f5df, type: 3}
+  - {fileID: 7245833986233652882, guid: 12aab74d06356484d8d70dbd34ff4269, type: 3}
+  - {fileID: 358089294374589998, guid: 8654e8ffb9bdfd94f8c68a34a39ab4b9, type: 3}
+  - {fileID: 4175771190533787408, guid: a014a080fa8b18f439ca5d9917bbd836, type: 3}
+  speaker: {fileID: 1783741441}
   index: 0
 --- !u!114 &848050973
 MonoBehaviour:

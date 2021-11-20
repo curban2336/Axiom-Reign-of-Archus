@@ -20,6 +20,8 @@ public class Dialogue : MonoBehaviour
     public Queue<string> choice1s;
     public Queue<string> choice2s;
     public Queue<string> decisions;
+    public List<Sprite> faces;
+    public GameObject speaker;
     public int index = 0;
     private bool returnConfirm = false;
     private bool stopIncrement = false;
@@ -75,6 +77,23 @@ public class Dialogue : MonoBehaviour
         if (names.Count == 0) return;
 
         Name.text = names.Dequeue();
+
+        if(Name.text == "Archus:")
+        {
+            speaker.GetComponent<Image>().sprite = faces[0];
+        }
+        else if (Name.text == "Circe:")
+        {
+            speaker.GetComponent<Image>().sprite = faces[1];
+        }
+        else if (Name.text == "Rectan:")
+        {
+            speaker.GetComponent<Image>().sprite = faces[2];
+        }
+        else if (Name.text == "Dena:")
+        {
+            speaker.GetComponent<Image>().sprite = faces[3];
+        }
 
         string sentence = sentences.Dequeue();
 
