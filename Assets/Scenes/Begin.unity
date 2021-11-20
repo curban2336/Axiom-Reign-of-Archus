@@ -595,7 +595,7 @@ MonoBehaviour:
       m_Calls:
       - m_Target: {fileID: 526447589}
         m_TargetAssemblyTypeName: Choice, Assembly-CSharp
-        m_MethodName: sendBack
+        m_MethodName: Press
         m_Mode: 1
         m_Arguments:
           m_ObjectArgument: {fileID: 0}
@@ -607,7 +607,7 @@ MonoBehaviour:
         m_CallState: 2
       - m_Target: {fileID: 526447589}
         m_TargetAssemblyTypeName: Choice, Assembly-CSharp
-        m_MethodName: Press
+        m_MethodName: sendBack
         m_Mode: 1
         m_Arguments:
           m_ObjectArgument: {fileID: 0}
@@ -1429,7 +1429,7 @@ MonoBehaviour:
       m_Calls:
       - m_Target: {fileID: 1108164006}
         m_TargetAssemblyTypeName: Choice, Assembly-CSharp
-        m_MethodName: sendBack
+        m_MethodName: Press
         m_Mode: 1
         m_Arguments:
           m_ObjectArgument: {fileID: 0}
@@ -1441,7 +1441,7 @@ MonoBehaviour:
         m_CallState: 2
       - m_Target: {fileID: 1108164006}
         m_TargetAssemblyTypeName: Choice, Assembly-CSharp
-        m_MethodName: Press
+        m_MethodName: sendBack
         m_Mode: 1
         m_Arguments:
           m_ObjectArgument: {fileID: 0}

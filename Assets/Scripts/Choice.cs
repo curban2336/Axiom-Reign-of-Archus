@@ -42,6 +42,7 @@ public class Choice : MonoBehaviour
         {
             button.GetComponent<Interactable>().TriggerDialogue();
             dialogue.GetComponent<Dialogue>().Increment();
+            Debug.Log("triggered dialogue");
             if (ChoiceManager.S.thresholds.Count == 3 && directive == "Left")
             {
                 ChoiceManager.S.choice1 = false;
@@ -55,7 +56,6 @@ public class Choice : MonoBehaviour
                     ChoiceManager.S.successModifier -= 1.3f;
                 }
                 ChoiceManager.S.ChoiceModifier1();
-                otherChoice.GetComponent<Choice>().sendBack();
                 return;
             }
             if (ChoiceManager.S.thresholds.Count == 2 && directive == "Left")
@@ -71,7 +71,6 @@ public class Choice : MonoBehaviour
                     ChoiceManager.S.successModifier -= 0.5f;
                 }
                 ChoiceManager.S.ChoiceModifier2();
-                otherChoice.GetComponent<Choice>().sendBack();
                 return;
             }
             if (ChoiceManager.S.thresholds.Count == 1 && directive == "Left")
@@ -87,16 +86,13 @@ public class Choice : MonoBehaviour
                     ChoiceManager.S.successModifier -= 0.6f;
                 }
                 ChoiceManager.S.ChoiceModifier3();
-                otherChoice.GetComponent<Choice>().sendBack();
                 return;
             }
-
             if (ChoiceManager.S.thresholds.Count == 3 && directive == "Right")
             {
                 ChoiceManager.S.choice1 = true;
                 ChoiceManager.S.choice1S = ChoiceManager.S.SuccessCalculator();
                 ChoiceManager.S.ChoiceModifier1();
-                otherChoice.GetComponent<Choice>().sendBack();
                 return;
             }
             if (ChoiceManager.S.thresholds.Count == 2 && directive == "Right")
@@ -108,7 +104,6 @@ public class Choice : MonoBehaviour
                     ChoiceManager.S.successModifier += 1f;
                 }
                 ChoiceManager.S.ChoiceModifier2();
-                otherChoice.GetComponent<Choice>().sendBack();
                 return;
             }
             if (ChoiceManager.S.thresholds.Count == 1 && directive == "Right")
@@ -116,7 +111,6 @@ public class Choice : MonoBehaviour
                 ChoiceManager.S.choice3 = true;
                 ChoiceManager.S.choice3S = ChoiceManager.S.SuccessCalculator();
                 ChoiceManager.S.ChoiceModifier3();
-                otherChoice.GetComponent<Choice>().sendBack();
                 return;
             }
         }
@@ -141,19 +135,36 @@ public class Choice : MonoBehaviour
 
     public void sendBack()
     {
-        if (button.transform.position.x > offScreen.x)
+        if (ChoiceManager.S.canClick = false)
         {
-            updatePos.x -= tempPos * Time.deltaTime;
-            button.transform.position = updatePos;
-            Decision.text = "";
-            Invoke("sendBack", 0.001f);
+            return;
         }
-        else if (button.transform.position.x < offScreen.x)
+        else
         {
-            updatePos.x += tempPos * Time.deltaTime;
-            button.transform.position = updatePos;
-            Decision.text = "";
-            Invoke("sendBack", 0.001f);
+            if (button.transform.position.x > offScreen.x)
+            {
+                updatePos.x -= tempPos * Time.deltaTime;
+                button.transform.position = updatePos;
+                Decision.text = "";
+                if(otherChoice.transform.position.x < otherChoice.GetComponent<Choice>().offScreen.x)
+                {
+                    otherChoice.GetComponent<Choice>().updatePos.x += tempPos * Time.deltaTime;
+                    otherChoice.transform.position = otherChoice.GetComponent<Choice>().updatePos;
+                }
+                Invoke("sendBack", 0.001f);
+            }
+            else if (button.transform.position.x < offScreen.x)
+            {
+                updatePos.x += tempPos * Time.deltaTime;
+                button.transform.position = updatePos;
+                Decision.text = "";
+                if (otherChoice.transform.position.x > otherChoice.GetComponent<Choice>().offScreen.x)
+                {
+                    otherChoice.GetComponent<Choice>().updatePos.x -= tempPos * Time.deltaTime;
+                    otherChoice.transform.position = otherChoice.GetComponent<Choice>().updatePos;
+                }
+                Invoke("sendBack", 0.001f);
+            }
         }
     }
 }

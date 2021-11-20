@@ -73,7 +73,6 @@ public class ChoiceManager: MonoBehaviour
         {
             choice = false;
         }
-        Debug.Log(choice);
         return choice;
     }
 
