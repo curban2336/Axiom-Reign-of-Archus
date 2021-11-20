@@ -977,10 +977,10 @@ MonoBehaviour:
   j: 0
   counter: 140000002600000035000000
   faces:
-  - {fileID: 1695902573766999066, guid: f18221d102cf8d4499826187dc38f5df, type: 3}
-  - {fileID: 7245833986233652882, guid: 12aab74d06356484d8d70dbd34ff4269, type: 3}
-  - {fileID: 358089294374589998, guid: 8654e8ffb9bdfd94f8c68a34a39ab4b9, type: 3}
-  - {fileID: 4175771190533787408, guid: a014a080fa8b18f439ca5d9917bbd836, type: 3}
+  - {fileID: 21300000, guid: 213c79ecf7dc0d64196dfb3a2fc2d668, type: 3}
+  - {fileID: 21300000, guid: 9af49fd0d951a0b4d86741bc4edeee8c, type: 3}
+  - {fileID: 21300000, guid: 5ff9ba3c7d57dd545830dcce5cfe443d, type: 3}
+  - {fileID: 21300000, guid: 1d422773ceeaeaf448df84f138c9aeb4, type: 3}
   speaker: {fileID: 1783741441}
   index: 0
 --- !u!114 &848050973
