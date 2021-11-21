@@ -19,14 +19,14 @@ public class Dialogue : MonoBehaviour
     public int[] counter;
     public Queue<string> choice1s;
     public Queue<string> choice2s;
-    public Queue<string> decisions;
     public List<Sprite> faces;
     public GameObject speaker;
     public int index = 0;
-    private bool returnConfirm = false;
     private bool stopIncrement = false;
-
+    private bool next = true;
     CanvasGroup group;
+    public Queue<string> decisions;
+    
 
     void Awake()
     {
@@ -104,7 +104,9 @@ public class Dialogue : MonoBehaviour
     {
         group.alpha = 1;
         currentText = text;
+        StopAllCoroutines();
         StartCoroutine(DisplayText());
+        next = true;
     }
 
     public void Close()
@@ -149,24 +151,20 @@ public class Dialogue : MonoBehaviour
 
     void Update()
     {
-        if (returnConfirm == false && counter[index] != null && decisions.Count > 0 && i == counter[index])
+        if (decisions.Count > 0 && i == counter[index])
         {
             choice1.text = choice1s.Dequeue();
             choice2.text = choice2s.Dequeue();
             Decision.text = decisions.Dequeue();
+            Debug.Log(Decision.text);
             foreach(Choice choice in FindObjectsOfType<Choice>())
             {
                 choice.callChoice();
             }
-            returnConfirm = true;
             if (index < 2)
             {
                 index++;
             }
-        }
-        else
-        {
-            returnConfirm = false;
         }
     }
 }

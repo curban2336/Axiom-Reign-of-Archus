@@ -31,7 +31,7 @@ public class Choice : MonoBehaviour
     {
         updatePos = button.transform.position;
         updatePos.x = posX;
-        tempPos = 100f;
+        tempPos = 250f;
         button.transform.position = updatePos;
         offScreen = button.transform.position;
     }
@@ -135,6 +135,7 @@ public class Choice : MonoBehaviour
 
     public void sendBack()
     {
+        Decision.text = "";
         if (ChoiceManager.S.canClick = false)
         {
             return;
@@ -145,7 +146,6 @@ public class Choice : MonoBehaviour
             {
                 updatePos.x -= tempPos * Time.deltaTime;
                 button.transform.position = updatePos;
-                Decision.text = "";
                 if(otherChoice.transform.position.x < otherChoice.GetComponent<Choice>().offScreen.x)
                 {
                     otherChoice.GetComponent<Choice>().updatePos.x += tempPos * Time.deltaTime;
@@ -157,7 +157,6 @@ public class Choice : MonoBehaviour
             {
                 updatePos.x += tempPos * Time.deltaTime;
                 button.transform.position = updatePos;
-                Decision.text = "";
                 if (otherChoice.transform.position.x > otherChoice.GetComponent<Choice>().offScreen.x)
                 {
                     otherChoice.GetComponent<Choice>().updatePos.x -= tempPos * Time.deltaTime;
