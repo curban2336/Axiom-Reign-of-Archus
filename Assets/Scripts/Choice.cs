@@ -150,8 +150,8 @@ public class Choice : MonoBehaviour
                 {
                     otherChoice.GetComponent<Choice>().updatePos.x += tempPos * Time.deltaTime;
                     otherChoice.transform.position = otherChoice.GetComponent<Choice>().updatePos;
+                    Invoke("sendBack", 0.001f);
                 }
-                Invoke("sendBack", 0.001f);
             }
             else if (button.transform.position.x < offScreen.x)
             {
@@ -161,8 +161,8 @@ public class Choice : MonoBehaviour
                 {
                     otherChoice.GetComponent<Choice>().updatePos.x -= tempPos * Time.deltaTime;
                     otherChoice.transform.position = otherChoice.GetComponent<Choice>().updatePos;
+                    Invoke("sendBack", 0.001f);
                 }
-                Invoke("sendBack", 0.001f);
             }
         }
     }
