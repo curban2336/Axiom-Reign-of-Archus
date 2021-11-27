@@ -42,6 +42,8 @@ public class ChoiceManager: MonoBehaviour
     public _choice choiceOne;
     public _choice choiceTwo;
     public _choice choiceThree;
+    public GameObject pause;
+    public GameObject next;
     
     // Start is called before the first frame update
     void Start()
@@ -343,6 +345,10 @@ public class ChoiceManager: MonoBehaviour
     // Update is called once per frame
     void Update()
     {
-        
+        if (Input.GetKey(KeyCode.P))
+        {
+            pause.SetActive(true);
+            next.SetActive(false);
+        }
     }
 }
