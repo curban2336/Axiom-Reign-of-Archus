@@ -3,6 +3,7 @@ using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.UI;
 using TMPro;
+using UnityEngine.SceneManagement;
 
 public class Dialogue : MonoBehaviour
 {
@@ -26,6 +27,9 @@ public class Dialogue : MonoBehaviour
     private bool next = true;
     CanvasGroup group;
     public Queue<string> decisions;
+    public GameObject recap;
+    public GameObject nextWeek;
+    public GameObject quit;
     
 
     void Awake()
@@ -45,6 +49,8 @@ public class Dialogue : MonoBehaviour
         decisions.Enqueue("Send Investigators beyond Geomet Territory to find Dena?");
         decisions.Enqueue("Exile or Imprison Heretics?");
         Decision.text = "";
+        nextWeek.SetActive(false);
+        quit.SetActive(false);
     }
     
     // Start is called before the first frame update
@@ -146,7 +152,26 @@ public class Dialogue : MonoBehaviour
             Text.text = displayedText;
             yield return new WaitForSeconds(0.02f);
         }
+        yield return new WaitForSeconds(1.5f);
+        if (i == 61)
+        {
+            nextWeek.SetActive(true);
+            quit.SetActive(true);
+        }
         yield return null;
+    }
+
+    public void Transition()
+    {
+        int weekNum = PlayerPrefs.GetInt("Week") + 1;
+        recap.GetComponent<Recap>().Save();
+        SceneManager.LoadScene("Week" + weekNum);
+        Recap.week++;
+    }
+
+    public void Return()
+    {
+        SceneManager.LoadScene("Menu");
     }
 
     void Update()
@@ -156,7 +181,6 @@ public class Dialogue : MonoBehaviour
             choice1.text = choice1s.Dequeue();
             choice2.text = choice2s.Dequeue();
             Decision.text = decisions.Dequeue();
-            Debug.Log(Decision.text);
             foreach(Choice choice in FindObjectsOfType<Choice>())
             {
                 choice.callChoice();

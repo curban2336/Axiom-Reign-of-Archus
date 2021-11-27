@@ -50,10 +50,12 @@ public class Choice : MonoBehaviour
                 if (ChoiceManager.S.choice1S == true)
                 {
                     ChoiceManager.S.successModifier += 1.3f;
+                    Recap.choice1 = 1;
                 }
                 else if (ChoiceManager.S.choice1S == false)
                 {
                     ChoiceManager.S.successModifier -= 1.3f;
+                    Recap.choice1 = 0;
                 }
                 ChoiceManager.S.ChoiceModifier1();
                 return;
@@ -65,10 +67,12 @@ public class Choice : MonoBehaviour
                 if (ChoiceManager.S.choice2S == true)
                 {
                     ChoiceManager.S.successModifier += 0.5f;
+                    Recap.choice2 = 1;
                 }
                 else if (ChoiceManager.S.choice2S == false)
                 {
                     ChoiceManager.S.successModifier -= 0.5f;
+                    Recap.choice2 = 0;
                 }
                 ChoiceManager.S.ChoiceModifier2();
                 return;
@@ -80,10 +84,12 @@ public class Choice : MonoBehaviour
                 if (ChoiceManager.S.choice3S == true)
                 {
                     ChoiceManager.S.successModifier += 0.6f;
+                    Recap.choice3 = 1;
                 }
                 else if (ChoiceManager.S.choice3S == false)
                 {
                     ChoiceManager.S.successModifier -= 0.6f;
+                    Recap.choice3 = 0;
                 }
                 ChoiceManager.S.ChoiceModifier3();
                 return;
@@ -92,6 +98,14 @@ public class Choice : MonoBehaviour
             {
                 ChoiceManager.S.choice1 = true;
                 ChoiceManager.S.choice1S = ChoiceManager.S.SuccessCalculator();
+                if (ChoiceManager.S.choice1S == true)
+                {
+                    Recap.choice1 = 4;
+                }
+                else if (ChoiceManager.S.choice1S == false)
+                {
+                    Recap.choice1 = 3;
+                }
                 ChoiceManager.S.ChoiceModifier1();
                 return;
             }
@@ -102,6 +116,11 @@ public class Choice : MonoBehaviour
                 if (ChoiceManager.S.choice2S == true)
                 {
                     ChoiceManager.S.successModifier += 1f;
+                    Recap.choice2 = 4;
+                }
+                else if (ChoiceManager.S.choice2S == false)
+                {
+                    Recap.choice1 = 3;
                 }
                 ChoiceManager.S.ChoiceModifier2();
                 return;
@@ -110,6 +129,14 @@ public class Choice : MonoBehaviour
             {
                 ChoiceManager.S.choice3 = true;
                 ChoiceManager.S.choice3S = ChoiceManager.S.SuccessCalculator();
+                if (ChoiceManager.S.choice3S == true)
+                {
+                    Recap.choice1 = 4;
+                }
+                else if (ChoiceManager.S.choice3S == false)
+                {
+                    Recap.choice1 = 3;
+                }
                 ChoiceManager.S.ChoiceModifier3();
                 return;
             }

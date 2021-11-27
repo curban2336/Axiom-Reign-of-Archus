@@ -7,6 +7,10 @@ public class MenuManager : MonoBehaviour
 {
     public void LoadScene(string sceneName)
     {
+        if (sceneName == "Begin")
+        {
+            PlayerPrefs.DeleteKey("Week");
+        }
         SceneManager.LoadScene(sceneName);
     }
 }
