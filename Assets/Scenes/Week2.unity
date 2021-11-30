@@ -186,55 +186,193 @@ MonoBehaviour:
     - Yes, go ahead, Rectan.
     - Martial Law has successfully been declared...unfortunately the transition went...perfectly.
       It may now be harder to find the rebels
+    - That was always a possibility, but now we have consolidated our presence throughout
+      all of the kingdom. It will be harder for the rebels to acquire a foothold.
+    - At least some good may come from this.
     names:
     - 'Rectan:'
     - 'Archus:'
     - 'Rectan:'
+    - 'Archus:'
+    - 'Circe:'
   - sentences:
-    - left succeed
+    - Good Morning my lord! I hope you rested well. We have a busy day ahead of us.
+      But before that, I shall update you on last week's orders!
+    - Yes, go ahead, Rectan.
+    - Martial Law has successfully been declared...unfortunately the people do not
+      think highly of you for it.
+    - "That was the point though, we\u2019ve forced these rebels to make their move
+      if they hope to capitalize. It should be easier to find them now."
+    - "let\u2019s just hope we didn\u2019t give them the troops they needed to be
+      a threat to us."
     names:
-    - test
+    - 'Rectan:'
+    - 'Archus:'
+    - 'Rectan:'
+    - 'Archus:'
+    - 'Circe:'
   - sentences:
-    - right fail
+    - Good Morning my lord! I hope you rested well. We have a busy day ahead of us.
+      But before that, I shall update you on last week's orders!
+    - Yes, go ahead, Rectan.
+    - 'Due to your choice to not declare Martial Law...public opinion has grown for
+      you unimpeded. '
+    - "If the people like you they\u2019ll have less of a reason to rebel...this
+      is good."
+    - "I hope so\u2026"
     names:
-    - test
+    - 'Rectan:'
+    - 'Archus:'
+    - 'Rectan:'
+    - 'Circe:'
+    - 'Archus:'
   - sentences:
-    - right succeed
+    - Good Morning my lord! I hope you rested well. We have a busy day ahead of us.
+      But before that, I shall update you on last week's orders!
+    - Yes, go ahead, Rectan.
+    - 'Due to your choice to not declare Martial Law...public opinion has grown for
+      you unimpeded. '
+    - "If the people like you they\u2019ll have less of a reason to rebel...this
+      is good."
+    - "I hope so\u2026"
     names:
-    - test
+    - 'Rectan:'
+    - 'Archus:'
+    - 'Rectan:'
+    - 'Circe:'
+    - 'Archus:'
   - sentences:
-    - left fail
+    - Now...about Dena.
+    - Our scouts have not been able to find a suitable base of operations. It may
+      be a while before they can begin their search. I am sorry, lord.
+    - "That isn\u2019t your fault Rectan. Besides, I would rather our scouts find
+      a temporary home before they begin searching anyway."
+    - "Hopefully this doesn\u2019t end up being a huge mistake. We cannot afford
+      to anger the Amalgam."
+    - "That leaves one last item to update you on\u2026"
     names:
-    - test
+    - 'Rectan:'
+    - 'Rectan:'
+    - 'Archus:'
+    - 'Circe:'
+    - 'Rectan:'
   - sentences:
-    - left succeed
+    - Now...about Dena.
+    - 'Our scouts have reported their safe transport. They have set up their base
+      in a small town within Amalgam territory. We already have reports from them
+      sighting a Geomet near the Birchar forests! '
+    - Fantastic! I was worried about them finding safe lodging, and this news of
+      spotting Geomet already...hopefully it actually is the King.
+    - "Hopefully he\u2019ll want to help us...there\u2019s always the chance that
+      he simply refuses to get involved."
+    - "Rectan: That leaves one last item to update you on\u2026"
     names:
-    - test
+    - 'Rectan:'
+    - 'Rectan:'
+    - 'Archus:'
+    - 'Circe:'
+    - 'Rectan:'
   - sentences:
-    - right fail
+    - Now...About Dena.
+    - The scouts we have kept in Axiom have been reassigned to different sectors
+      of the stronghold. As of now they have nothing to report.
+    - Well, at least nothing has changed. For better or worse.
+    - That is certainly true, my lord...
+    - "That leaves one last item to update you on\u2026"
     names:
-    - test
+    - 'Rectan:'
+    - 'Rectan:'
+    - 'Archus:'
+    - 'Rectan:'
+    - 'Rectan:'
   - sentences:
-    - right succeed
+    - Now...about Dena.
+    - The scouts that would have been sent to the king have already been deployed
+      as spies in Axiom. If the rebels find their way to our home, we will know.
+    - "That\u2019s great news! Hopefully we will be able to detect their presence
+      before they can settle in."
+    - Having this line of defense will be beneficial if this rebel group grows more
+      serious.
+    - "That leaves one last item to update you on\u2026"
     names:
-    - test
+    - 'Rectan:'
+    - 'Rectan:'
+    - 'Circe:'
+    - 'Archus:'
+    - 'Rectan:'
   - sentences:
-    - left fail
+    - Our heretics have been exiled from Geomet territory as per your request. However,
+      the exiles went their own ways. We have no way to keep track of them all now.
+    - Then I guess this was a bust...unfortunate. At least the heretics will be outside
+      our borders.
+    - "Now we just have to hope that this rebellion doesn\u2019t scoop them."
+    - If they do, it will tell us more about this rebellion.
+    - I believe that is all I need to inform you of as of now my lord.
+    - "So...what\u2019s on the docket today?"
     names:
-    - test
+    - 'Rectan:'
+    - 'Archus:'
+    - 'Circe:'
+    - 'Archus:'
+    - 'Rectan:'
+    - 'Circe:'
   - sentences:
-    - left succeed
+    - Our heretics have been exiled from Geomet territory as per your request. We
+      have dispatched our best spies in an attempt to tail them. If the heretics
+      find their way to the rebels we shall know!
+    - Good, the sooner we find these rebels, the sooner we can disperse their forces
+      and end this growing revolution.
+    - "Are we sure it\u2019s a good idea to be feeding recruits to the enemy though?"
+    - No...but without this risk we have no way of finding them...
+    - I believe that is all I need to inform you of as of now my lord.
+    - "So...what\u2019s on the docket today?"
     names:
-    - test
+    - 'Rectan:'
+    - 'Archus:'
+    - 'Circe:'
+    - 'Archus:'
+    - 'Rectan:'
+    - 'Circe:'
   - sentences:
-    - right fail
+    - "Our heretics have been imprisoned as per your request. We had to reassign
+      some forces from our reserves to adequately staff our prisons due to the prisoners
+      overpowering our previous security.\r"
+    - I want you to make sure that those injured Geomet are compensated properly...
+    - "Of course, although that won\u2019t stop the Geomet families from blaming
+      you for this."
+    - I know...I bear that blame and accept their anger.
+    - I believe that is all I need to inform you of as of now my lord.
+    - "So...what\u2019s on the docket today?"
     names:
+    - 'Rectan:'
+    - 'Archus:'
+    - 'Circe:'
     - test
+    - 'Rectan:'
+    - 'Circe:'
   - sentences:
-    - right succeed
+    - Our heretics have been imprisoned as per your request. We had to reassign some
+      forces from our reserves to adequately staff our prisons but there should be
+      little to no issues.
+    - Good, and these heretics will be under close watch, yes?
+    - "Of course, Archus! I\u2019ll make sure of it."
+    - Good...good...
+    - I believe that is all I need to inform you of as of now my lord.
+    - "So...what\u2019s on the docket today?"
     names:
-    - test
-  speak: []
+    - 'Rectan:'
+    - 'Archus:'
+    - 'Circe:'
+    - 'Archus:'
+    - 'Rectan:'
+    - 'Circe:'
+  speak:
+    sentences: []
+    names: []
+  speakLength: 16
+  start1: 0
+  start2: 5
+  start3: 10
   startWeek: {fileID: 889867918}
   i: 1
 --- !u!1 &267495694
@@ -1871,7 +2009,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   m_Material: {fileID: 0}
-  m_Color: {r: 1, g: 1, b: 1, a: 0.3137255}
+  m_Color: {r: 0, g: 0, b: 0, a: 0.3137255}
   m_RaycastTarget: 1
   m_RaycastPadding: {x: 0, y: 0, z: 0, w: 0}
   m_Maskable: 1
@@ -4332,8 +4470,8 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0.5, y: 0.5}
   m_AnchorMax: {x: 0.5, y: 0.5}
-  m_AnchoredPosition: {x: 161.9725, y: -16.467}
-  m_SizeDelta: {x: 647.8702, y: 102.38}
+  m_AnchoredPosition: {x: 161.96994, y: -16.467}
+  m_SizeDelta: {x: 683, y: 102.38}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!114 &1985055031
 MonoBehaviour:

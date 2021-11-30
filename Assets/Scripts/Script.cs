@@ -9,12 +9,18 @@ public class Script
     public string[] sentences;
     public string[] names;
 
-    public void Add(string[] sentence, string[] name, int length)
+    public void Add(string[] sentence, string[] name, int length, int startIndex)
     {
-        for(int i = 0; i < length; i++)
+        int j = 0;
+        for(int i = startIndex; i < length; i++)
         {
-            sentences[i] = sentence[i];
-            names[i] = name[i];
+            Debug.Log(i);
+            sentences[i] = sentence[j];
+            names[i] = name[j];
+            if (j < sentence.Length)
+            {
+                j++;
+            }
         }
     }
 }
