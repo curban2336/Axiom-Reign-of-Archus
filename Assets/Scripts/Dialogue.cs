@@ -13,7 +13,7 @@ public class Dialogue : MonoBehaviour
     public Text choice2;
     public TMP_Text Decision;
     private string currentText;
-    private Queue<string> sentences;
+    public Queue<string> sentences;
     private Queue<string> names;
     public int i = 1;
     public int j = 0;
