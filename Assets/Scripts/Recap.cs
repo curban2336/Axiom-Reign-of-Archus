@@ -54,17 +54,17 @@ public class Recap : MonoBehaviour
             choice3N = PlayerPrefs.GetInt("Choice3N");
         }
         PlayerPrefs.SetInt("Choice3N", choice3N);
+
+        Debug.Log(PlayerPrefs.GetInt("Choice1N"));
+        Debug.Log(PlayerPrefs.GetInt("Choice2N"));
+        Debug.Log(PlayerPrefs.GetInt("Choice3N"));
     }
 
     public void Save()
     {
-        choice1N = choice1;
-        choice2N = choice2;
-        choice3N = choice3;
-
-        PlayerPrefs.SetInt("Choice1N", choice1N);
-        PlayerPrefs.SetInt("Choice2N", choice2N);
-        PlayerPrefs.SetInt("Choice3N", choice3N);
+        PlayerPrefs.SetInt("Choice1N", choice1);
+        PlayerPrefs.SetInt("Choice2N", choice2);
+        PlayerPrefs.SetInt("Choice3N", choice3);
     }
 
     // Update is called once per frame

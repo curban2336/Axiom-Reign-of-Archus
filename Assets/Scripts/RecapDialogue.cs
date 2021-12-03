@@ -11,6 +11,7 @@ public class RecapDialogue : MonoBehaviour
     public int start2;
     public int start3;
     public GameObject startWeek;
+    public GameObject recapNext;
     public int i = 0;
 
     void Start()
@@ -18,8 +19,6 @@ public class RecapDialogue : MonoBehaviour
         startWeek.SetActive(false);
         speak.sentences = new string[speakLength];
         speak.names = new string[speakLength];
-        Debug.Log(speak.names.Length);
-        Debug.Log(speak.sentences.Length);
     }
     
     public void TriggerDialogue1()
@@ -97,6 +96,7 @@ public class RecapDialogue : MonoBehaviour
     public void StartD()
     {
         startWeek.SetActive(true);
+        recapNext.SetActive(false);
     }
 
     public void TriggerCheck()

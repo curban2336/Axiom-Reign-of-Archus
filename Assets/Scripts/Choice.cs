@@ -120,7 +120,7 @@ public class Choice : MonoBehaviour
                 }
                 else if (ChoiceManager.S.choice2S == false)
                 {
-                    Recap.choice1 = 3;
+                    Recap.choice2 = 3;
                 }
                 ChoiceManager.S.ChoiceModifier2();
                 return;
@@ -131,11 +131,11 @@ public class Choice : MonoBehaviour
                 ChoiceManager.S.choice3S = ChoiceManager.S.SuccessCalculator();
                 if (ChoiceManager.S.choice3S == true)
                 {
-                    Recap.choice1 = 4;
+                    Recap.choice3 = 4;
                 }
                 else if (ChoiceManager.S.choice3S == false)
                 {
-                    Recap.choice1 = 3;
+                    Recap.choice3 = 3;
                 }
                 ChoiceManager.S.ChoiceModifier3();
                 return;

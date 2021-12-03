@@ -15,6 +15,7 @@ public class PauseButton : MonoBehaviour
         {
             pause.SetActive(false);
             next.SetActive(true);
+
         }
         else if(designator == "Menu")
         {

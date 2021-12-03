@@ -348,7 +348,14 @@ public class ChoiceManager: MonoBehaviour
         if (Input.GetKey(KeyCode.P))
         {
             pause.SetActive(true);
-            next.SetActive(false);
+            if(next.active == false)
+            {
+
+            }
+            else
+            {
+                next.SetActive(false);
+            }
         }
     }
 }

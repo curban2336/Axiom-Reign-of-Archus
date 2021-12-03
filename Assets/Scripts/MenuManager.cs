@@ -10,7 +10,19 @@ public class MenuManager : MonoBehaviour
         if (sceneName == "Begin")
         {
             PlayerPrefs.DeleteKey("Week");
+            PlayerPrefs.DeleteKey("Choice1N");
+            PlayerPrefs.DeleteKey("Choice2N");
+            PlayerPrefs.DeleteKey("Choice3N");
+
+            SceneManager.LoadScene(sceneName);
         }
-        SceneManager.LoadScene(sceneName);
+        if (sceneName == "Continue")
+        {
+            if(PlayerPrefs.GetInt("Week") == 1)
+            {
+                SceneManager.LoadScene("Begin");
+            }
+            SceneManager.LoadScene("Week" + PlayerPrefs.GetInt("Week"));
+        }
     }
 }
