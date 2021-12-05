@@ -16,13 +16,10 @@ ScriptsOnlyBuild:
     - UnityEditor.U2D.Animation.BoneGizmo
     Unity.2D.IK.Editor.dll:
     - UnityEditor.U2D.IK.IKEditorManager
-    - UnityEditor.U2D.IK.IKGizmos
     Unity.2D.IK.Runtime.dll:
     - UnityEditor.U2D.IK.IKEditorManagerHelper
     Unity.2D.Tilemap.Editor.dll:
     - UnityEditor.Tilemaps.GridPaintingState
-    - UnityEditor.Tilemaps.GridPaletteBrushes
-    - UnityEditor.Tilemaps.GridPalettes
     - UnityEditor.Tilemaps.SceneViewGridManager
     - UnityEditor.Tilemaps.SceneViewOpenTilePaletteHelper
     - UnityEditor.Tilemaps.TileDragAndDropManager
@@ -63,6 +60,10 @@ ScriptsOnlyBuild:
     - Class: 48
       Script: {instanceID: 0}
     - Class: 81
+      Script: {instanceID: 0}
+    - Class: 82
+      Script: {instanceID: 0}
+    - Class: 83
       Script: {instanceID: 0}
     - Class: 104
       Script: {instanceID: 0}
@@ -976,7 +977,7 @@ ScriptsOnlyBuild:
     className: Interactable
   - hash:
       serializedVersion: 2
-      Hash: 9cc9ca95807fbd299322a99517b15904
+      Hash: c53626399e555070f5bff517851021b2
     assemblyName: Assembly-CSharp.dll
     namespaceName: 
     className: Dialogue
@@ -1112,4 +1113,4 @@ ScriptsOnlyBuild:
   - Assets/Scenes/Tutorial.unity
   - Assets/Scenes/Begin.unity
   - Assets/Scenes/Week2.unity
-  playerPath: D:/Github/Real github/Axiom-Reign-of-Archus True/Build3
+  playerPath: D:/Github/Real github/Axiom-Reign-of-Archus True/Build4
