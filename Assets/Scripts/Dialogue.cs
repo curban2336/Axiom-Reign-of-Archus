@@ -30,7 +30,8 @@ public class Dialogue : MonoBehaviour
     public GameObject recap;
     public GameObject nextWeek;
     public GameObject quit;
-    
+    public List<AudioSource> audioSources;
+
 
     void Awake()
     {
@@ -146,6 +147,18 @@ public class Dialogue : MonoBehaviour
 
         foreach(char c in currentText.ToCharArray())
         {
+            if (Name.text == "Archus:")
+            {
+                audioSources[0].Play();
+            }
+            else if (Name.text == "Circe:")
+            {
+                audioSources[1].Play();
+            }
+            else if (Name.text == "Rectan:")
+            {
+                audioSources[2].Play();
+            }
             alphaIndex++;
             Text.text = originalText;
             displayedText = Text.text.Insert(alphaIndex, "<color=#00000000>");

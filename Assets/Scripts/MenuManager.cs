@@ -26,5 +26,9 @@ public class MenuManager : MonoBehaviour
             }
             SceneManager.LoadScene("Week" + PlayerPrefs.GetInt("Week"));
         }
+        else
+        {
+            SceneManager.LoadScene(sceneName);
+        }
     }
 }
