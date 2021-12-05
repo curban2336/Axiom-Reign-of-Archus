@@ -39,27 +39,34 @@ public class ChoiceManager: MonoBehaviour
     public TMP_Text ARText;
     public GameObject PO;
     public GameObject AR;
+    public GameObject recap;
     public _choice choiceOne;
     public _choice choiceTwo;
     public _choice choiceThree;
     public GameObject pause;
     public GameObject next;
     
+    void Awake()
+    {
+        resourceP = publicOpinion;
+        resourceR = axiomReserve;
+    }
+    
     // Start is called before the first frame update
     void Start()
     {
         S = this;
-        resourceP = publicOpinion;
-        resourceR = axiomReserve;
+        resourceP = recap.GetComponent<Recap>().opinion;
+        resourceR = recap.GetComponent<Recap>().reserve;
 
         thresholds = new Queue<int>();
         thresholds.Enqueue(threshold1);
         thresholds.Enqueue(threshold2);
         thresholds.Enqueue(threshold3);
         POText = PO.GetComponent<TextMeshProUGUI>();
-        POText.text = "Public Opinion: " + publicOpinion;
+        POText.text = "Public Opinion: " + resourceP;
         ARText = AR.GetComponent<TextMeshProUGUI>();
-        ARText.text = "Axiom Reserve: " + axiomReserve;
+        ARText.text = "Axiom Reserve: " + resourceR;
     }
 
     public bool SuccessCalculator()
@@ -103,6 +110,8 @@ public class ChoiceManager: MonoBehaviour
                     }
 
                     GameObject.FindGameObjectWithTag(choiceOne.designatorF).GetComponent<TextMeshProUGUI>().text = designator + (resource);
+                    recap.GetComponent<Recap>().reserve = resourceR;
+                    recap.GetComponent<Recap>().opinion = resourceP;
                     return;
                 }
                 if (choice1S == true)
@@ -121,6 +130,8 @@ public class ChoiceManager: MonoBehaviour
                     }
 
                     GameObject.FindGameObjectWithTag(choiceOne.designatorS).GetComponent<TextMeshProUGUI>().text = designator + (resource);
+                    recap.GetComponent<Recap>().reserve = resourceR;
+                    recap.GetComponent<Recap>().opinion = resourceP;
                     return;
                 }
             }
@@ -142,6 +153,8 @@ public class ChoiceManager: MonoBehaviour
                     }
 
                     GameObject.FindGameObjectWithTag(choiceOne.designator2F).GetComponent<TextMeshProUGUI>().text = designator + (resource);
+                    recap.GetComponent<Recap>().reserve = resourceR;
+                    recap.GetComponent<Recap>().opinion = resourceP;
                     return;
                 }
                 if (choice1S == true)
@@ -160,6 +173,8 @@ public class ChoiceManager: MonoBehaviour
                     }
 
                     GameObject.FindGameObjectWithTag(choiceOne.designator2S).GetComponent<TextMeshProUGUI>().text = designator + (resource);
+                    recap.GetComponent<Recap>().reserve = resourceR;
+                    recap.GetComponent<Recap>().opinion = resourceP;
                     return;
                 }
             }
@@ -191,6 +206,8 @@ public class ChoiceManager: MonoBehaviour
                     }
 
                     GameObject.FindGameObjectWithTag(choiceTwo.designatorF).GetComponent<TextMeshProUGUI>().text = designator + (resource);
+                    recap.GetComponent<Recap>().reserve = resourceR;
+                    recap.GetComponent<Recap>().opinion = resourceP;
                     return;
                 }
                 if (choice2S == true)
@@ -209,6 +226,8 @@ public class ChoiceManager: MonoBehaviour
                     }
 
                     GameObject.FindGameObjectWithTag(choiceTwo.designatorS).GetComponent<TextMeshProUGUI>().text = designator + (resource);
+                    recap.GetComponent<Recap>().reserve = resourceR;
+                    recap.GetComponent<Recap>().opinion = resourceP;
                     return;
                 }
             }
@@ -230,6 +249,8 @@ public class ChoiceManager: MonoBehaviour
                     }
 
                     GameObject.FindGameObjectWithTag(choiceTwo.designator2F).GetComponent<TextMeshProUGUI>().text = designator + (resource);
+                    recap.GetComponent<Recap>().reserve = resourceR;
+                    recap.GetComponent<Recap>().opinion = resourceP;
                     return;
                 }
                 if (choice2S == true)
@@ -248,6 +269,8 @@ public class ChoiceManager: MonoBehaviour
                     }
 
                     GameObject.FindGameObjectWithTag(choiceTwo.designator2S).GetComponent<TextMeshProUGUI>().text = designator + (resource);
+                    recap.GetComponent<Recap>().reserve = resourceR;
+                    recap.GetComponent<Recap>().opinion = resourceP;
                     return;
                 }
             }
@@ -279,6 +302,8 @@ public class ChoiceManager: MonoBehaviour
                     }
 
                     GameObject.FindGameObjectWithTag(choiceThree.designatorF).GetComponent<TextMeshProUGUI>().text = designator + (resource);
+                    recap.GetComponent<Recap>().reserve = resourceR;
+                    recap.GetComponent<Recap>().opinion = resourceP;
                     return;
                 }
                 if (choice3S == true)
@@ -297,6 +322,8 @@ public class ChoiceManager: MonoBehaviour
                     }
 
                     GameObject.FindGameObjectWithTag(choiceThree.designatorS).GetComponent<TextMeshProUGUI>().text = designator + (resource);
+                    recap.GetComponent<Recap>().reserve = resourceR;
+                    recap.GetComponent<Recap>().opinion = resourceP;
                     return;
                 }
             }
@@ -318,6 +345,8 @@ public class ChoiceManager: MonoBehaviour
                     }
 
                     GameObject.FindGameObjectWithTag(choiceThree.designator2F).GetComponent<TextMeshProUGUI>().text = designator + (resource);
+                    recap.GetComponent<Recap>().reserve = resourceR;
+                    recap.GetComponent<Recap>().opinion = resourceP;
                     return;
                 }
                 if (choice3S == true)
@@ -336,6 +365,8 @@ public class ChoiceManager: MonoBehaviour
                     }
 
                     GameObject.FindGameObjectWithTag(choiceThree.designator2S).GetComponent<TextMeshProUGUI>().text = designator + (resource);
+                    recap.GetComponent<Recap>().reserve = resourceR;
+                    recap.GetComponent<Recap>().opinion = resourceP;
                     return;
                 }
             }

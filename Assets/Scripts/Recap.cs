@@ -10,6 +10,9 @@ public class Recap : MonoBehaviour
     static public int choice3 = 0;
     static public int week = 1;
 
+    public int reserve;
+    public int opinion;
+
     private int choice1N = 0;
     private int choice2N = 0;
     private int choice3N = 0;
@@ -38,6 +41,16 @@ public class Recap : MonoBehaviour
         }
         PlayerPrefs.SetInt("Week", week);
 
+        if (PlayerPrefs.HasKey("Reserve"))
+        {
+            reserve = PlayerPrefs.GetInt("Reserve");
+        }
+        PlayerPrefs.SetInt("Reserve", reserve);
+        if (PlayerPrefs.HasKey("Opinion"))
+        {
+            opinion = PlayerPrefs.GetInt("Opinion");
+        }
+        PlayerPrefs.SetInt("Opinion", opinion);
 
         if (PlayerPrefs.HasKey("Choice1N"))
         {
@@ -54,10 +67,6 @@ public class Recap : MonoBehaviour
             choice3N = PlayerPrefs.GetInt("Choice3N");
         }
         PlayerPrefs.SetInt("Choice3N", choice3N);
-
-        Debug.Log(PlayerPrefs.GetInt("Choice1N"));
-        Debug.Log(PlayerPrefs.GetInt("Choice2N"));
-        Debug.Log(PlayerPrefs.GetInt("Choice3N"));
     }
 
     public void Save()
@@ -85,6 +94,14 @@ public class Recap : MonoBehaviour
         if (week != PlayerPrefs.GetInt("Week"))
         {
             PlayerPrefs.SetInt("Week", week);
+        }
+        if (reserve != PlayerPrefs.GetInt("Reserve"))
+        {
+            PlayerPrefs.SetInt("Reserve", reserve);
+        }
+        if (opinion != PlayerPrefs.GetInt("Opinion"))
+        {
+            PlayerPrefs.SetInt("Opinion", opinion);
         }
     }
 }
