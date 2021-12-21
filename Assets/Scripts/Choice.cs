@@ -146,13 +146,13 @@ public class Choice : MonoBehaviour
     public void callChoice()
     {
         ChoiceManager.S.canClick = true;
-        if (updatePos.x >= posMax)
+        if (updatePos.x >= posMax+1)
         {
             updatePos.x -= tempPos * Time.deltaTime;
             button.transform.position = updatePos;
             Invoke("callChoice", 0.001f);
         }
-        else if (updatePos.x <= posMin)
+        else if (updatePos.x <= posMin-1)
         {
             updatePos.x += tempPos * Time.deltaTime;
             button.transform.position = updatePos;

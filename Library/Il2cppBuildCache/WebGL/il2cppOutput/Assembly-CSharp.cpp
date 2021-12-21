@@ -25095,13 +25095,13 @@ IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR void Choice_callChoice_mAA4877D64BE662EC17A6A
 		// ChoiceManager.S.canClick = true;
 		ChoiceManager_t1CCB510FFF26C921453D9018AD73F9710293CF52 * L_0 = ((ChoiceManager_t1CCB510FFF26C921453D9018AD73F9710293CF52_StaticFields*)il2cpp_codegen_static_fields_for(ChoiceManager_t1CCB510FFF26C921453D9018AD73F9710293CF52_il2cpp_TypeInfo_var))->get_S_4();
 		L_0->set_canClick_11((bool)1);
-		// if (updatePos.x >= posMax)
+		// if (updatePos.x >= posMax+1)
 		Vector3_t65B972D6A585A0A5B63153CF1177A90D3C90D65E * L_1 = __this->get_address_of_updatePos_12();
 		float L_2 = L_1->get_x_2();
 		float L_3 = __this->get_posMax_13();
-		if ((!(((float)L_2) >= ((float)L_3))))
+		if ((!(((float)L_2) >= ((float)((float)il2cpp_codegen_add((float)L_3, (float)(1.0f)))))))
 		{
-			goto IL_0060;
+			goto IL_0066;
 		}
 	}
 	{
@@ -25126,15 +25126,15 @@ IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR void Choice_callChoice_mAA4877D64BE662EC17A6A
 		return;
 	}
 
-IL_0060:
+IL_0066:
 	{
-		// else if (updatePos.x <= posMin)
+		// else if (updatePos.x <= posMin-1)
 		Vector3_t65B972D6A585A0A5B63153CF1177A90D3C90D65E * L_13 = __this->get_address_of_updatePos_12();
 		float L_14 = L_13->get_x_2();
 		float L_15 = __this->get_posMin_14();
-		if ((!(((float)L_14) <= ((float)L_15))))
+		if ((!(((float)L_14) <= ((float)((float)il2cpp_codegen_subtract((float)L_15, (float)(1.0f)))))))
 		{
-			goto IL_00b4;
+			goto IL_00c0;
 		}
 	}
 	{
@@ -25157,7 +25157,7 @@ IL_0060:
 		MonoBehaviour_Invoke_m4AAB759653B1C6FB0653527F4DDC72D1E9162CC4(__this, _stringLiteral5942B60CC64FDCCAFF92693ADDE30C77FEC39A58, (0.00100000005f), /*hidden argument*/NULL);
 	}
 
-IL_00b4:
+IL_00c0:
 	{
 		// }
 		return;
